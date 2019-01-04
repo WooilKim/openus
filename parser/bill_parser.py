@@ -3,14 +3,14 @@ from docx import Document
 
 def read_paragraphs():
     """ 문단 읽는 방법"""
-    doc = Document('data/bill/2017834.docx')
+    doc = Document('data/bill/docx/2017834.docx')
     for p in doc.paragraphs:
         print(p)
 
 
 def read_table():
     """ table 읽는 방법"""
-    doc = Document('data/bill/2017834.docx')
+    doc = Document('data/bill/docx/2017834.docx')
     for t in doc.tables:
         for row in t.rows:
             for cell in row.cells:
