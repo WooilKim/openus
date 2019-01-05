@@ -5,7 +5,7 @@ def read_paragraphs():
     """ 문단 읽는 방법"""
     doc = Document('data/bill/docx/2017834.docx')
     for p in doc.paragraphs:
-        print(p)
+        print(p.text)
 
 
 def read_table():
@@ -20,4 +20,4 @@ def read_table():
 
 if __name__ == '__main__':
     read_paragraphs()
-    read_table()
+    # read_table()
