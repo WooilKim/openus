@@ -5,9 +5,9 @@ def read_paragraphs():
     """ 문단 읽는 방법"""
     # print(os.getcwd())
     # doc = Document('../../../parser/data/bill/docx/2017817.docx')
-    filename = '../data/docx/constitutional_law_1952'
+    filename = '../data/docx/constitutional_law_1954'
     doc = Document(filename+'.docx')
-    with open('../data/txt/constitutional_law_1952.txt', 'w') as f:
+    with open('../data/txt/constitutional_law_1954.txt', 'w') as f:
 
         for p in doc.paragraphs:
             print(p.text)
