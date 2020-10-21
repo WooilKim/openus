@@ -1,0 +1,64 @@
+{
+    "bill_num": "2024850",
+    "bill_proposed_date": "2020-04-20",
+    "bill_title": "아동·청소년의 성보호에 관한 법률 일부개정법률안(백혜련의원 등 10인)",
+    "bill_id": "PRC_W2Q0R0X4G2J0D1Q1W2W7Z1Y6I9O4B5",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 및 주요내용\n\n  인터넷 메신저를 통해 벌어진 디지털 성 착취 사건인 소위 ‘N번방 사건’의 실체가 하나둘씩 밝혀지면서 국민적 공분이 커지고 있음. 더구나 현재까지 신원이 파악된 피해자 74명 중 미성년자가 16명에 이르고 있어 더욱 더 큰 충격을 주고 있음.\n  아동？청소년에 대한 성범죄는 성 착취임과 동시에 가혹한 아동학대행위로 피해자가 감내해야 할 정신적？신체적 충격의 정도를 가늠하기조차 어려움.\n  이처럼 아동？청소년 음란물 범죄의 규모와 형태가 갈수록 교묘해지고 있지만, 우리나라의 아동 대상 성범죄에 대한 처벌이 지나치게 관대해 실효성이 떨어진다는 비판이 커지고 있음.\n  이에 아동？청소년 대상 성범죄의 경우 형의 하한을 설정하는 등 법정형을 강화하여 경각심을 제고하고 범죄 근절에 기여하려는 것임(안 제11조).",
+    "doc": "의안원문",
+    "proposed_session": "제20대 (2016~2020) 제377회",
+    "others_cnt": 4,
+    "coactors": [
+        {
+            "name": "백혜련",
+            "name_chinese": "白惠蓮",
+            "congressman_id": "9770980"
+        },
+        {
+            "name": "권미혁",
+            "name_chinese": "權美赫",
+            "congressman_id": null
+        },
+        {
+            "name": "김경협",
+            "name_chinese": "金炅俠",
+            "congressman_id": "9770712"
+        },
+        {
+            "name": "김성환",
+            "name_chinese": "金星煥",
+            "congressman_id": "9771089"
+        },
+        {
+            "name": "김영주",
+            "name_chinese": "金榮珠",
+            "congressman_id": "9770975"
+        },
+        {
+            "name": "남인순",
+            "name_chinese": "南仁順",
+            "congressman_id": "9770752"
+        },
+        {
+            "name": "박영선",
+            "name_chinese": "朴映宣",
+            "congressman_id": null
+        },
+        {
+            "name": "서영교",
+            "name_chinese": "徐瑛敎",
+            "congressman_id": "9770784"
+        },
+        {
+            "name": "정성호",
+            "name_chinese": "鄭成湖",
+            "congressman_id": "9770881"
+        },
+        {
+            "name": "허윤정",
+            "name_chinese": "許允貞",
+            "congressman_id": null
+        }
+    ],
+    "crawled_date": "2020/10/20 21:28:23"
+}

@@ -1,0 +1,89 @@
+{
+    "bill_num": "2024855",
+    "bill_proposed_date": "2020-04-21",
+    "bill_title": "아동복지법 일부개정법률안(한정애의원 등 15인)",
+    "bill_id": "PRC_U2Q0L0U4N2T1U1M7D0N2R1E2P8I7V4",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "■ 제안이유 및 주요내용 \n최근 SNS상에서 단체대화방을 만들고 아동을 포함한 피해자들의 성착취 사진과 동영상을 돈을 받고 공유한 사건이 발생하여 전 국민의 공분을 자아내고 있음. \n  현행법에서는 아동에 대한 금지행위로서 아동에게 음란한 행위를 시키거나 이를 매개하는 행위 또는 아동에게 성적 수치심을 주는 성희롱 등의 성적 학대행위를 규정하고 있으나 아동을 음란의 대상으로 규정하고 성적 수치심을 느끼는 주체로 표현한 것 등은 부적절하여 ‘성적학대’ 등의 표현을 같이 명시하여 의미를 보다 명확하게 하려는 것임(안 제17조제2호).",
+    "doc": "의안원문",
+    "proposed_session": "제20대 (2016~2020) 제377회",
+    "others_cnt": 3,
+    "coactors": [
+        {
+            "name": "한정애",
+            "name_chinese": "韓貞愛",
+            "congressman_id": "9770859"
+        },
+        {
+            "name": "강병원",
+            "name_chinese": "姜炳遠",
+            "congressman_id": "9770933"
+        },
+        {
+            "name": "기동민",
+            "name_chinese": "奇東旻",
+            "congressman_id": "9770927"
+        },
+        {
+            "name": "김상희",
+            "name_chinese": "金相姬",
+            "congressman_id": "9770527"
+        },
+        {
+            "name": "김영진",
+            "name_chinese": "金榮鎭",
+            "congressman_id": "9770981"
+        },
+        {
+            "name": "김정우",
+            "name_chinese": "金政祐",
+            "congressman_id": null
+        },
+        {
+            "name": "김종민",
+            "name_chinese": "金鍾民",
+            "congressman_id": "9771009"
+        },
+        {
+            "name": "박경미",
+            "name_chinese": "朴炅美",
+            "congressman_id": null
+        },
+        {
+            "name": "박홍근",
+            "name_chinese": "朴洪根",
+            "congressman_id": "9770779"
+        },
+        {
+            "name": "서영교",
+            "name_chinese": "徐瑛敎",
+            "congressman_id": "9770784"
+        },
+        {
+            "name": "손금주",
+            "name_chinese": "孫今柱",
+            "congressman_id": null
+        },
+        {
+            "name": "윤준호",
+            "name_chinese": "尹俊晧",
+            "congressman_id": null
+        },
+        {
+            "name": "제윤경",
+            "name_chinese": "諸閏景",
+            "congressman_id": null
+        },
+        {
+            "name": "진선미",
+            "name_chinese": "陳善美",
+            "congressman_id": "9770852"
+        },
+        {
+            "name": "허윤정",
+            "name_chinese": "許允貞",
+            "congressman_id": null
+        }
+    ],
+    "crawled_date": "2020/10/20 21:28:12"
+}

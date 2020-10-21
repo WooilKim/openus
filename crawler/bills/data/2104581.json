@@ -1,0 +1,69 @@
+{
+    "bill_num": "2104581",
+    "bill_proposed_date": "2020-10-20",
+    "bill_title": "조세특례제한법 일부개정법률안(박홍근의원 등 11인)",
+    "bill_id": "PRC_E2A0W1U0X2Y0Y1V5S4A3H5G9L3Q4R3",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 및 주요내용\n\n  최근 코로나19의 국내 확산세가 커진 뒤 경영 환경 악화 등으로 자영업자들이 폐업 절벽에 내몰리고 있음. 정부는 한계 자영업자의 연착륙과 재도약 지원 방안으로 자영업자가 임금 근로자로 전직할 경우 전직장려수당을 지급하여 폐업 충격을 완화하고 있으나 수당 지급이 일회성에 불과하고 희망리턴패키지를 수료한 소상공인만 수당을 지급받을 수 있어 안정적인 임금근로자로의 전환을 전방위적으로 도모하기에 여전히 미진한 수준임.\n  이에 청년, 60세 이상 노인, 장애인, 경력단절 여성 등이 일정요건을 충족하는 중소기업에 취업하는 경우 취업일로부터 3년(청년의 경우 5년)이 되는 날까지 소득세의 70%(청년의 경우 90%)를 감면해주는 중소기업 취업자에 대한 소득세 감면 혜택을 전직 영세 자영업자에게도 부여하여 코로나19의 고용 충격 속에 폐업 자영업자의 임금 근로자 전환을 촉진하고 재기를 도모하고자 함(안 제30조제1항).\n\n\n참고사항\n\n  이 법률안은 「국회법」 제85조의3제4항에 따라 2020년도 세입예산안 부수 법률안으로 지정될 필요가 있음.",
+    "doc": null,
+    "proposed_session": "제21대 (2020~2024) 제382회",
+    "others_cnt": 1,
+    "coactors": [
+        {
+            "name": "박홍근",
+            "name_chinese": "朴洪根",
+            "congressman_id": "9770779"
+        },
+        {
+            "name": "강선우",
+            "name_chinese": "姜仙祐",
+            "congressman_id": "9771116"
+        },
+        {
+            "name": "김수흥",
+            "name_chinese": "金洙興",
+            "congressman_id": "9771210"
+        },
+        {
+            "name": "김정호",
+            "name_chinese": "金禎鎬",
+            "congressman_id": "9771090"
+        },
+        {
+            "name": "김주영",
+            "name_chinese": "金周暎",
+            "congressman_id": "9771192"
+        },
+        {
+            "name": "백혜련",
+            "name_chinese": "白惠蓮",
+            "congressman_id": "9770980"
+        },
+        {
+            "name": "양향자",
+            "name_chinese": "梁香子",
+            "congressman_id": "9771155"
+        },
+        {
+            "name": "우원식",
+            "name_chinese": "禹元植",
+            "congressman_id": "9770872"
+        },
+        {
+            "name": "이수진",
+            "name_chinese": "李壽珍",
+            "congressman_id": "9771269"
+        },
+        {
+            "name": "정일영",
+            "name_chinese": "鄭日永",
+            "congressman_id": "9771150"
+        },
+        {
+            "name": "조승래",
+            "name_chinese": "趙承來",
+            "congressman_id": "9770973"
+        }
+    ],
+    "crawled_date": "2020/10/20 21:15:12"
+}

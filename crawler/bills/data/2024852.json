@@ -1,0 +1,84 @@
+{
+    "bill_num": "2024852",
+    "bill_proposed_date": "2020-04-21",
+    "bill_title": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 일부개정법률안(한정애의원 등 14인)",
+    "bill_id": "PRC_K2G0F0S4L2B1D1C6O4P1T1B5J3K1W2",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 및 주요내용\n\n  「형법」에 따르면 몰수는 타형에 부가하여 과하는 부가형으로, 선고유예와 같이 행위자에게 유죄의 재판을 하지 않으면서 몰수를 선고할 수 있는 예외를 제외하면 피고인에게 주형(主刑)을 선고하는 경우에만 몰수를 할 수 있음.\n  그런데 최근 문제가 된 소위 ‘n번방’ 사건의 경우 SNS를 이용하여 온라인으로 불법 촬영물을 유포하는 범죄의 특성상 불특정 다수의 가해자를 일일이 특정하는 것이 어려울 가능성이 있고, 최근 관련자들이 수사 전에 스스로 목숨을 끊는 사례도 발생하고 있어, 행위자의 사망이나 불특정 등으로 공소를 제기할 수 없는 경우에도 관련 범죄수익을 환수하여야 한다는 지적이 있음.\n  그러므로 중대범죄로 인한 범죄수익등에 관하여는 「형법」 제49조에도 불구하고 법원이 독립하여 몰수를 선고할 수 있도록 법적 근거를 마련하려는 것임(안 제10조의2 신설).",
+    "doc": "의안원문",
+    "proposed_session": "제20대 (2016~2020) 제377회",
+    "others_cnt": 4,
+    "coactors": [
+        {
+            "name": "한정애",
+            "name_chinese": "韓貞愛",
+            "congressman_id": "9770859"
+        },
+        {
+            "name": "강병원",
+            "name_chinese": "姜炳遠",
+            "congressman_id": "9770933"
+        },
+        {
+            "name": "기동민",
+            "name_chinese": "奇東旻",
+            "congressman_id": "9770927"
+        },
+        {
+            "name": "김상희",
+            "name_chinese": "金相姬",
+            "congressman_id": "9770527"
+        },
+        {
+            "name": "김영진",
+            "name_chinese": "金榮鎭",
+            "congressman_id": "9770981"
+        },
+        {
+            "name": "김정우",
+            "name_chinese": "金政祐",
+            "congressman_id": null
+        },
+        {
+            "name": "김종민",
+            "name_chinese": "金鍾民",
+            "congressman_id": "9771009"
+        },
+        {
+            "name": "박경미",
+            "name_chinese": "朴炅美",
+            "congressman_id": null
+        },
+        {
+            "name": "박홍근",
+            "name_chinese": "朴洪根",
+            "congressman_id": "9770779"
+        },
+        {
+            "name": "서영교",
+            "name_chinese": "徐瑛敎",
+            "congressman_id": "9770784"
+        },
+        {
+            "name": "손금주",
+            "name_chinese": "孫今柱",
+            "congressman_id": null
+        },
+        {
+            "name": "윤준호",
+            "name_chinese": "尹俊晧",
+            "congressman_id": null
+        },
+        {
+            "name": "제윤경",
+            "name_chinese": "諸閏景",
+            "congressman_id": null
+        },
+        {
+            "name": "허윤정",
+            "name_chinese": "許允貞",
+            "congressman_id": null
+        }
+    ],
+    "crawled_date": "2020/10/20 21:28:19"
+}

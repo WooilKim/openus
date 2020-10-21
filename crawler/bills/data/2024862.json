@@ -1,0 +1,64 @@
+{
+    "bill_num": "2024862",
+    "bill_proposed_date": "2020-04-23",
+    "bill_title": "국유재산특례제한법 일부개정법률안(정성호의원 등 10인)",
+    "bill_id": "PRC_A2I0F0H4R2S3C1I7Z4W4A0L6X6X7M7",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 및 주요내용\n\n  새로운 철도노선의 개통 등으로 발생하는 철도 유휴부지의 효과적  활용을 위해 「철도산업발전기본법 일부개정법률안」(의안번호 제19365호)이 발의된 바 있음.\n  이에 국가 또는 지방자치단체가 직접 공용？공공용 또는 비영리 공익사업용으로 철도시설을 사용하고자 하는 경우에는 그 사용료의 전부 또는 일부를 면제할 수 있도록 허용하는 특례를 「철도산업발전기본법 일부개정법률안」(의안번호 제19365호)에 규정함에 따라 국유재산특례의 근거를 규정하고 있는 현행법을 동시에 개정하려는 것임(안 별표 제223호 신설).\n\n\n참고사항\n\n  이 법률안은 정성호 의원이 대표발의한 「철도산업발전기본법 일부개정법률안」(의안번호 제19365호)의 의결을 전제로 하는 것이므로 같은 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
+    "doc": "의안원문",
+    "proposed_session": "제20대 (2016~2020) 제377회",
+    "others_cnt": 4,
+    "coactors": [
+        {
+            "name": "정성호",
+            "name_chinese": "鄭成湖",
+            "congressman_id": "9770881"
+        },
+        {
+            "name": "김상희",
+            "name_chinese": "金相姬",
+            "congressman_id": "9770527"
+        },
+        {
+            "name": "맹성규",
+            "name_chinese": "孟聖奎",
+            "congressman_id": "9771091"
+        },
+        {
+            "name": "박찬대",
+            "name_chinese": "朴贊大",
+            "congressman_id": "9770963"
+        },
+        {
+            "name": "박홍근",
+            "name_chinese": "朴洪根",
+            "congressman_id": "9770779"
+        },
+        {
+            "name": "백혜련",
+            "name_chinese": "白惠蓮",
+            "congressman_id": "9770980"
+        },
+        {
+            "name": "송영길",
+            "name_chinese": "宋永吉",
+            "congressman_id": "9770967"
+        },
+        {
+            "name": "안호영",
+            "name_chinese": "安浩永",
+            "congressman_id": "9771017"
+        },
+        {
+            "name": "윤관석",
+            "name_chinese": "尹官石",
+            "congressman_id": "9770808"
+        },
+        {
+            "name": "윤호중",
+            "name_chinese": "尹昊重",
+            "congressman_id": "9770876"
+        }
+    ],
+    "crawled_date": "2020/10/20 21:28:37"
+}

@@ -1,0 +1,74 @@
+{
+    "bill_num": "2104580",
+    "bill_proposed_date": "2020-10-20",
+    "bill_title": "종합부동산세법 일부개정법률안(정일영의원 등 12인)",
+    "bill_id": "PRC_V2E0K1G0S2Y0L1D4P2R3Y4T2T7A6Z1",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 및 주요내용\n\n  최근 주택공시가격이 상승함에 따라 1주택 실거주자가 이전보다 더 많은 종합부동산세를 납부하게 될 것으로 예상되고 있음. 그러나 부동산 시장의 과열로 촉발된 주택 공시가격 상승이 1주택자의 보유 부담 인상으로 이어지는 것은 합리적이지 못하다는 지적이 있음. 특히 오랜 기간 한 주택에서 거주하고 있고 마땅한 소득이 없이 생계를 유지하는 만 60세 이상의 1주택 보유자의 경우, 갑작스레 인상된 세금을 감당하기 어려울 것이라는 문제제기가 있음.\n  이에 과세표준이 3억원 이하인 1세대 1주택 실거주자의 보유 기간과 실거주 기간에 따른 공제를 구분하고 실거주 기간에 따른 공제율과 만 60세 이상에 대한 공제율을 인상하여 실거주자에 대한 과세 부담을 낮추고자 함. 그리고 공제율 합계를 최대 100분의 90의 범위까지 늘리고 과세를 이연할 수 있게끔 하여 소득이 없는 고령자에 대한 조세 부담을 최소한으로 하고자 함(안 제9조).",
+    "doc": null,
+    "proposed_session": "제21대 (2020~2024) 제382회",
+    "others_cnt": 1,
+    "coactors": [
+        {
+            "name": "정일영",
+            "name_chinese": "鄭日永",
+            "congressman_id": "9771150"
+        },
+        {
+            "name": "김교흥",
+            "name_chinese": "金敎興",
+            "congressman_id": "9771152"
+        },
+        {
+            "name": "김남국",
+            "name_chinese": "金南局",
+            "congressman_id": "9771181"
+        },
+        {
+            "name": "김수흥",
+            "name_chinese": "金洙興",
+            "congressman_id": "9771210"
+        },
+        {
+            "name": "문진석",
+            "name_chinese": "文振碩",
+            "congressman_id": "9771204"
+        },
+        {
+            "name": "민형배",
+            "name_chinese": "閔馨培",
+            "congressman_id": "9771159"
+        },
+        {
+            "name": "양기대",
+            "name_chinese": "梁基大",
+            "congressman_id": "9771178"
+        },
+        {
+            "name": "윤후덕",
+            "name_chinese": "尹厚德",
+            "congressman_id": "9770813"
+        },
+        {
+            "name": "이성만",
+            "name_chinese": "李成萬",
+            "congressman_id": "9771151"
+        },
+        {
+            "name": "이용빈",
+            "name_chinese": "李龍彬",
+            "congressman_id": "9771158"
+        },
+        {
+            "name": "허영",
+            "name_chinese": "許榮",
+            "congressman_id": "9771196"
+        },
+        {
+            "name": "허종식",
+            "name_chinese": "許琮植",
+            "congressman_id": "9771149"
+        }
+    ],
+    "crawled_date": "2020/10/20 21:15:13"
+}

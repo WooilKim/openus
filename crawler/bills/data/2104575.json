@@ -1,0 +1,99 @@
+{
+    "bill_num": "2104575",
+    "bill_proposed_date": "2020-10-19",
+    "bill_title": "농어촌특별세법 일부개정법률안(이광재의원 등 17인)",
+    "bill_id": "PRC_U2I0L1Y0X1S9J1E9Q1X5H4Q7D2U3M2",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 \n\n  자본시장에 대한 장기투자 유도를 통해 국민들의 노후대비와 경제활성화 등을 지원하기 위하여 투자형 개인종합자산관리계좌의 이자·배당·양도소득에 대하여 소득세를 부과하지 아니하는 경우를 농어촌특별세의 비과세 대상에 추가하려는 것임(안 제4조제11호의5 신설).\n\n\n참고사항\n\n  이 법률안은 이광재의원이 대표발의한 「조세특례제한법 일부개정법률안」(의안번호 제4574호)의 의결을 전제로 하는 것이므로 같은 법률안이 의결되지 아니하거나 수정의결되는 경우에는 이에 맞추어 조정되어야 할 것임.",
+    "doc": "의안원문",
+    "proposed_session": "제21대 (2020~2024) 제382회",
+    "others_cnt": 2,
+    "coactors": [
+        {
+            "name": "이광재",
+            "name_chinese": "李光宰",
+            "congressman_id": "9771198"
+        },
+        {
+            "name": "김수흥",
+            "name_chinese": "金洙興",
+            "congressman_id": "9771210"
+        },
+        {
+            "name": "김승원",
+            "name_chinese": "金勝源",
+            "congressman_id": "9771169"
+        },
+        {
+            "name": "민형배",
+            "name_chinese": "閔馨培",
+            "congressman_id": "9771159"
+        },
+        {
+            "name": "서영교",
+            "name_chinese": "徐瑛敎",
+            "congressman_id": "9770784"
+        },
+        {
+            "name": "서영석",
+            "name_chinese": "徐暎錫",
+            "congressman_id": "9771176"
+        },
+        {
+            "name": "송기헌",
+            "name_chinese": "宋基憲",
+            "congressman_id": "9771001"
+        },
+        {
+            "name": "송재호",
+            "name_chinese": "宋在祜",
+            "congressman_id": "9771238"
+        },
+        {
+            "name": "양향자",
+            "name_chinese": "梁香子",
+            "congressman_id": "9771155"
+        },
+        {
+            "name": "우원식",
+            "name_chinese": "禹元植",
+            "congressman_id": "9770872"
+        },
+        {
+            "name": "윤영찬",
+            "name_chinese": "尹永燦",
+            "congressman_id": "9771170"
+        },
+        {
+            "name": "이병훈",
+            "name_chinese": "李炳勳",
+            "congressman_id": "9771154"
+        },
+        {
+            "name": "이용빈",
+            "name_chinese": "李龍彬",
+            "congressman_id": "9771158"
+        },
+        {
+            "name": "이형석",
+            "name_chinese": "李炯錫",
+            "congressman_id": "9771157"
+        },
+        {
+            "name": "정일영",
+            "name_chinese": "鄭日永",
+            "congressman_id": "9771150"
+        },
+        {
+            "name": "홍기원",
+            "name_chinese": "洪起元",
+            "congressman_id": "9771179"
+        },
+        {
+            "name": "황운하",
+            "name_chinese": "黃雲夏",
+            "congressman_id": "9771161"
+        }
+    ],
+    "crawled_date": "20/10/2020 21:14:21"
+}

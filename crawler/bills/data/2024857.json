@@ -1,0 +1,89 @@
+{
+    "bill_num": "2024857",
+    "bill_proposed_date": "2020-04-21",
+    "bill_title": "성폭력범죄의 처벌 등에 관한 특례법 일부개정법률안(한정애의원 등 15인)",
+    "bill_id": "PRC_H2O0F0F4E2T1B1F7N2L0M4Q0X8E7P3",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유\n\n  최근 이른바 N번방 사건 등 디지털 성범죄가 사회적 문제로 대두되면서, 성범죄자에 대한 처벌 강화 필요성이 제기되고 있음. 그러나 현행법에 명문화된 규정이 없거나 처벌 수준이 낮아, 성폭력범죄로부터 국민을 실질적으로 보호하기 부족한 점이 있음. \n  이에 스토킹에 대한 처벌을 명문화함과 동시에 불법촬영 및 불법 반포·상영 등에 대한 상습범 처벌 규정을 마련하고, 아울러 성폭력범죄의 예비 또는 음모에 대한 처벌규정을 신설하는 등 현행법의 미비점을 보완하려는 것임.\n\n\n주요내용\n\n가. 이른바 스토킹을 포함한 성적 목적을 위한 지속적 괴롭힘에 대한 처벌을 명문화함(안 제12조의2 신설).\n나. 불법 촬영 행위, 불법 촬영물 및 복제물의 반포·상영 등의 죄를 상습적으로 범한 경우에 가중 처벌함(안 제14조제4항 신설).\n다. 성폭력범죄의 예비 또는 음모에 대한 처벌 규정을 신설함(안 제15조의2 신설).",
+    "doc": "의안원문",
+    "proposed_session": "제20대 (2016~2020) 제377회",
+    "others_cnt": 4,
+    "coactors": [
+        {
+            "name": "한정애",
+            "name_chinese": "韓貞愛",
+            "congressman_id": "9770859"
+        },
+        {
+            "name": "강병원",
+            "name_chinese": "姜炳遠",
+            "congressman_id": "9770933"
+        },
+        {
+            "name": "기동민",
+            "name_chinese": "奇東旻",
+            "congressman_id": "9770927"
+        },
+        {
+            "name": "김상희",
+            "name_chinese": "金相姬",
+            "congressman_id": "9770527"
+        },
+        {
+            "name": "김영진",
+            "name_chinese": "金榮鎭",
+            "congressman_id": "9770981"
+        },
+        {
+            "name": "김정우",
+            "name_chinese": "金政祐",
+            "congressman_id": null
+        },
+        {
+            "name": "김종민",
+            "name_chinese": "金鍾民",
+            "congressman_id": "9771009"
+        },
+        {
+            "name": "박경미",
+            "name_chinese": "朴炅美",
+            "congressman_id": null
+        },
+        {
+            "name": "박홍근",
+            "name_chinese": "朴洪根",
+            "congressman_id": "9770779"
+        },
+        {
+            "name": "서영교",
+            "name_chinese": "徐瑛敎",
+            "congressman_id": "9770784"
+        },
+        {
+            "name": "손금주",
+            "name_chinese": "孫今柱",
+            "congressman_id": null
+        },
+        {
+            "name": "윤준호",
+            "name_chinese": "尹俊晧",
+            "congressman_id": null
+        },
+        {
+            "name": "제윤경",
+            "name_chinese": "諸閏景",
+            "congressman_id": null
+        },
+        {
+            "name": "진선미",
+            "name_chinese": "陳善美",
+            "congressman_id": "9770852"
+        },
+        {
+            "name": "허윤정",
+            "name_chinese": "許允貞",
+            "congressman_id": null
+        }
+    ],
+    "crawled_date": "2020/10/20 21:28:08"
+}

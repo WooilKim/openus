@@ -1,0 +1,194 @@
+{
+    "bill_num": "2104579",
+    "bill_proposed_date": "2020-10-20",
+    "bill_title": "비무장지대의 보전과 평화적 이용 지원에 관한 법률안(전해철의원 등 36인)",
+    "bill_id": "PRC_Y2C0B1L0G0N5Z1A0R2K2D3H0F0W8S2",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유\n\n  비무장지대(DMZ: demilitarized zone)는 그 동안 냉전시대의 유산으로 인식되어 왔으나, 남북의 대치로 인해 오히려 독특한 문화 및 자연환경이 유지되고 있어 남북이 이를 평화적으로 이용한다면 한반도 평화 정착에 기여하고, 인류 공동의 소중한 자산으로도 이용할 수 있을 것임.\n  또한, 판문점선언에서 남북정상이 비무장지대의 평화지대화에 합의하였고, 이후 평양공동선언에서 구체적인 이행조치를 마련하였음에도 현재 「군사기지 및 군사시설 보호법」, 「자연환경보전법」 등에서 비무장지대 내 행위제한과 관련하여 일부 내용만을 규율하고 있을 뿐임.\n  이에 비무장지대의 보전과 평화적 이용 지원에 관한 법률을 제정하여 체계적으로 비무장지대를 보전하고, 비무장지대의 평화적 이용을 통해 한반도의 평화 정착에 기여하려는 것임.\n\n\n주요내용\n\n가. 이 법은 비무장지대의 보전과 평화적 이용에 필요한 사항을 규정하여 비무장지대의 생태적·문화적 가치를 보전하고 평화적 이용을 지원함으로써 한반도 평화에 이바지함을 목적으로 함(안 제1조).\n나. 통일부장관은 비무장지대의 보전과 평화적 이용을 지원하고 그 추진 기반을 마련하기 위한 종합계획을 5년마다 수립하고, 종합계획을 시행하기 위한 연도별 시행계획을 매년 수립하도록 함(안 제6조 및 제8조).\n다. 비무장지대의 보전과 평화적 이용을 위하여 통일부에 비무장지대평화이용위원회를 두도록 함(안 제9조).\n라. 정부는 비무장지대의 평화적 이용을 위하여 관계 중앙행정기관의 장 및 관계 시·도지사와 협의하고 위원회의 심의를 거쳐 비무장지대 평화이용지구를 지정하고 그 조성과 개발·운영을 추진하거나 지원할 수 있도록 함(안 제11조).\n마. 정부는 비무장지대의 보전과 평화적 이용에 관한 국민의 이해와 참여를 증진하기 위하여 국민이 참여하는 사업을 개발·시행할 수 있음(안 제17조).\n바. 정부와 지방자치단체는 비무장지대의 보전과 평화적 이용에 필요한 전문인력을 양성할 수 있고, 통일부장관은 비무장지대와 관련된 정보를 종합적으로 관리하고, 유용한 정보를 제공하기 위하여 종합정보시스템을 구축·운영할 수 있음(안 제18조 및 제19조).",
+    "doc": "의안원문",
+    "proposed_session": "제21대 (2020~2024) 제382회",
+    "others_cnt": 1,
+    "coactors": [
+        {
+            "name": "전해철",
+            "name_chinese": "全海澈",
+            "congressman_id": "9770846"
+        },
+        {
+            "name": "강병원",
+            "name_chinese": "姜炳遠",
+            "congressman_id": "9770933"
+        },
+        {
+            "name": "강준현",
+            "name_chinese": "康準鉉",
+            "congressman_id": "9771168"
+        },
+        {
+            "name": "고영인",
+            "name_chinese": "高永寅",
+            "congressman_id": "9771180"
+        },
+        {
+            "name": "김민철",
+            "name_chinese": "金敏徹",
+            "congressman_id": "9771173"
+        },
+        {
+            "name": "김병기",
+            "name_chinese": "金炳基",
+            "congressman_id": "9770941"
+        },
+        {
+            "name": "김성환",
+            "name_chinese": "金星煥",
+            "congressman_id": "9771089"
+        },
+        {
+            "name": "김수흥",
+            "name_chinese": "金洙興",
+            "congressman_id": "9771210"
+        },
+        {
+            "name": "김승원",
+            "name_chinese": "金勝源",
+            "congressman_id": "9771169"
+        },
+        {
+            "name": "김영주",
+            "name_chinese": "金榮珠",
+            "congressman_id": "9770975"
+        },
+        {
+            "name": "김정호",
+            "name_chinese": "金禎鎬",
+            "congressman_id": "9771090"
+        },
+        {
+            "name": "김한정",
+            "name_chinese": "金漢正",
+            "congressman_id": "9770991"
+        },
+        {
+            "name": "김회재",
+            "name_chinese": "金會在",
+            "congressman_id": "9771216"
+        },
+        {
+            "name": "서삼석",
+            "name_chinese": "徐參錫",
+            "congressman_id": "9771092"
+        },
+        {
+            "name": "송재호",
+            "name_chinese": "宋在祜",
+            "congressman_id": "9771238"
+        },
+        {
+            "name": "위성곤",
+            "name_chinese": "魏聖坤",
+            "congressman_id": "9771038"
+        },
+        {
+            "name": "유정주",
+            "name_chinese": "兪訂炷",
+            "congressman_id": "9771266"
+        },
+        {
+            "name": "윤미향",
+            "name_chinese": "尹美香",
+            "congressman_id": "9771263"
+        },
+        {
+            "name": "윤영찬",
+            "name_chinese": "尹永燦",
+            "congressman_id": "9771170"
+        },
+        {
+            "name": "윤재갑",
+            "name_chinese": "尹才鉀",
+            "congressman_id": "9771221"
+        },
+        {
+            "name": "이광재",
+            "name_chinese": "李光宰",
+            "congressman_id": "9771198"
+        },
+        {
+            "name": "이병훈",
+            "name_chinese": "李炳勳",
+            "congressman_id": "9771154"
+        },
+        {
+            "name": "이성만",
+            "name_chinese": "李成萬",
+            "congressman_id": "9771151"
+        },
+        {
+            "name": "이수진",
+            "name_chinese": "李秀眞",
+            "congressman_id": "9771284"
+        },
+        {
+            "name": "이용빈",
+            "name_chinese": "李龍彬",
+            "congressman_id": "9771158"
+        },
+        {
+            "name": "이용선",
+            "name_chinese": "李庸瑄",
+            "congressman_id": "9771115"
+        },
+        {
+            "name": "이용우",
+            "name_chinese": "李龍雨",
+            "congressman_id": "9771184"
+        },
+        {
+            "name": "장경태",
+            "name_chinese": "張耿態",
+            "congressman_id": "9771110"
+        },
+        {
+            "name": "전혜숙",
+            "name_chinese": "全惠淑",
+            "congressman_id": "9770926"
+        },
+        {
+            "name": "정필모",
+            "name_chinese": "鄭必模",
+            "congressman_id": "9771264"
+        },
+        {
+            "name": "진성준",
+            "name_chinese": "陳聲準",
+            "congressman_id": "9771117"
+        },
+        {
+            "name": "천준호",
+            "name_chinese": "千俊鎬",
+            "congressman_id": "9771112"
+        },
+        {
+            "name": "허영",
+            "name_chinese": "許榮",
+            "congressman_id": "9771196"
+        },
+        {
+            "name": "허종식",
+            "name_chinese": "許琮植",
+            "congressman_id": "9771149"
+        },
+        {
+            "name": "홍성국",
+            "name_chinese": "洪性國",
+            "congressman_id": "9771167"
+        },
+        {
+            "name": "홍정민",
+            "name_chinese": "洪貞敏",
+            "congressman_id": "9771183"
+        }
+    ],
+    "crawled_date": "2020/10/20 21:15:14"
+}

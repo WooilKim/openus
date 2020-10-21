@@ -1,0 +1,99 @@
+{
+    "bill_num": "2104571",
+    "bill_proposed_date": "2020-10-19",
+    "bill_title": "소득세법 일부개정법률안(이광재의원 등 17인)",
+    "bill_id": "PRC_M2B0A1Q0N1J9D1P7E5W3H5C0C4N5F8",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 및 주요내용\n\n  현행법에서는 주식 양도소득세에 대하여 대주주의 경우 과세표준 3억원을 기준으로 20%, 25%의 세율을 각각 적용하고 1년 미만의 단기 보유한 일정 주식을 양도하는 경우에는 30%의 세율로 중과하고 있으며, 소액주주인 경우 장외거래 소득에 대하여 기간에 관계없이 10% 및 20%의 세율을 적용하고 있음.\n  그런데 주식시장의 급격한 변동으로 인한 위험 부담을 완화시키고 기업의 경영 안정성을 확보하기 위해서는 주식을 장기보유하는 투자방식이 보다 활성화될 필요가 있으나 현재는 이를 장려하는 제도가 부족한 실정으로 향후 장기투자에 대한 다양한 혜택 방안을 모색할 필요가 있을 것임.\n  이러한 방안의 일환으로 보유 기간별로 양도소득세율을 세분화하고 오랜 기간 보유할수록 낮은 세율을 적용받을 수 있도록 함으로써 장기투자를 촉진하려는 것임(안 제104조제1항제11호가목 및 나목).",
+    "doc": "의안원문",
+    "proposed_session": "제21대 (2020~2024) 제382회",
+    "others_cnt": 2,
+    "coactors": [
+        {
+            "name": "이광재",
+            "name_chinese": "李光宰",
+            "congressman_id": "9771198"
+        },
+        {
+            "name": "김수흥",
+            "name_chinese": "金洙興",
+            "congressman_id": "9771210"
+        },
+        {
+            "name": "김승원",
+            "name_chinese": "金勝源",
+            "congressman_id": "9771169"
+        },
+        {
+            "name": "민형배",
+            "name_chinese": "閔馨培",
+            "congressman_id": "9771159"
+        },
+        {
+            "name": "서영교",
+            "name_chinese": "徐瑛敎",
+            "congressman_id": "9770784"
+        },
+        {
+            "name": "서영석",
+            "name_chinese": "徐暎錫",
+            "congressman_id": "9771176"
+        },
+        {
+            "name": "송기헌",
+            "name_chinese": "宋基憲",
+            "congressman_id": "9771001"
+        },
+        {
+            "name": "송재호",
+            "name_chinese": "宋在祜",
+            "congressman_id": "9771238"
+        },
+        {
+            "name": "양향자",
+            "name_chinese": "梁香子",
+            "congressman_id": "9771155"
+        },
+        {
+            "name": "우원식",
+            "name_chinese": "禹元植",
+            "congressman_id": "9770872"
+        },
+        {
+            "name": "윤영찬",
+            "name_chinese": "尹永燦",
+            "congressman_id": "9771170"
+        },
+        {
+            "name": "이병훈",
+            "name_chinese": "李炳勳",
+            "congressman_id": "9771154"
+        },
+        {
+            "name": "이용빈",
+            "name_chinese": "李龍彬",
+            "congressman_id": "9771158"
+        },
+        {
+            "name": "이형석",
+            "name_chinese": "李炯錫",
+            "congressman_id": "9771157"
+        },
+        {
+            "name": "정일영",
+            "name_chinese": "鄭日永",
+            "congressman_id": "9771150"
+        },
+        {
+            "name": "홍기원",
+            "name_chinese": "洪起元",
+            "congressman_id": "9771179"
+        },
+        {
+            "name": "황운하",
+            "name_chinese": "黃雲夏",
+            "congressman_id": "9771161"
+        }
+    ],
+    "crawled_date": "20/10/2020 21:14:26"
+}

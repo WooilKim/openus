@@ -1,0 +1,69 @@
+{
+    "bill_num": "2024863",
+    "bill_proposed_date": "2020-04-24",
+    "bill_title": "조세특례제한법 일부개정법률안(박홍근의원 등 11인)",
+    "bill_id": "PRC_S2F0M0P4O2Q4Z1H1Y4H5G2C4W3R1Y2",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유\n\n  코로나19의 확산을 막고자 공적마스크 유통 확대 및 마스크 5부제를 실시하게 되면서 전국 2만2400여 곳의 약국이 공적 유통 마스크의 약 70%를 판매하고 있음. 시중 약국은 정부의 ‘마스크 5부제’를 처음 시행하면서 생기는 초기 불편과 혼란, 항의를 오롯이 감당하였고 중복구매 방지를 위한 신분 확인과 공급량·판매량 데이터 입력, 1인 2매 제한을 위한 마스크 재포장 등 대부분의 업무가 마스크 판매에 치중되어 약 조제 등 일상 업무에 차질을 빚으며 생기는 경제적 손실도 감수하게 됨. 이에 공적 마스크 공급사업을 수행하고 있는 약국에 합당한 보상의 필요성이 지속적으로 제기되고 있음. 따라서 감염병 확산 예방에 큰 기여를 한 공적 마스크 공급 약국에 부가세？소득세 감면 등 세제 혜택을 부여하고자 함.\n\n주요내용\n\n  공적 마스크 판매에 따른 소득세？부가세를 비과세함(안 제104조의31, 제108조의6 신설).",
+    "doc": "의안원문",
+    "proposed_session": "제20대 (2016~2020) 제377회",
+    "others_cnt": 4,
+    "coactors": [
+        {
+            "name": "박홍근",
+            "name_chinese": "朴洪根",
+            "congressman_id": "9770779"
+        },
+        {
+            "name": "권칠승",
+            "name_chinese": "權七勝",
+            "congressman_id": "9770998"
+        },
+        {
+            "name": "기동민",
+            "name_chinese": "奇東旻",
+            "congressman_id": "9770927"
+        },
+        {
+            "name": "김병기",
+            "name_chinese": "金炳基",
+            "congressman_id": "9770941"
+        },
+        {
+            "name": "남인순",
+            "name_chinese": "南仁順",
+            "congressman_id": "9770752"
+        },
+        {
+            "name": "안호영",
+            "name_chinese": "安浩永",
+            "congressman_id": "9771017"
+        },
+        {
+            "name": "우원식",
+            "name_chinese": "禹元植",
+            "congressman_id": "9770872"
+        },
+        {
+            "name": "윤관석",
+            "name_chinese": "尹官石",
+            "congressman_id": "9770808"
+        },
+        {
+            "name": "이용득",
+            "name_chinese": "李龍得",
+            "congressman_id": null
+        },
+        {
+            "name": "정성호",
+            "name_chinese": "鄭成湖",
+            "congressman_id": "9770881"
+        },
+        {
+            "name": "조승래",
+            "name_chinese": "趙承來",
+            "congressman_id": "9770973"
+        }
+    ],
+    "crawled_date": "2020/10/20 21:28:34"
+}

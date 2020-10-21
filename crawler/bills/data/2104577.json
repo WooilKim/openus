@@ -1,0 +1,79 @@
+{
+    "bill_num": "2104577",
+    "bill_proposed_date": "2020-10-20",
+    "bill_title": "문학진흥법 일부개정법률안(도종환의원 등 13인)",
+    "bill_id": "PRC_G2K0O1J0N0U8M1F3C5O7N3S4U4F9L1",
+    "bill_opt": "mainLatelyJubsuBill",
+    "summary_contents": "제안이유 및 주요내용\n\n  현행법은 문학관 자료의 수집ㆍ보존ㆍ복원ㆍ관리ㆍ전시 및 활용과 문학관 자료에 대한 조사ㆍ연구, 문학관 자료와 관련된 국내외 교류ㆍ협력 등을 위하여 문학관을 설립할 수 있는 근거를 두고 있음.\n  그런데 「도서관법」이나 「박물관 및 미술관 진흥법」과 달리 현행법에 문학관에 대한 재산 기부나 문학관 자료의 교환ㆍ양여ㆍ대여 관련 근거 규정이 없어 문학관 운영에 제약이 있다는 지적이 있으며, 박물관ㆍ미술관 협력망과 같이 문학관 간에 협력망을 구축하여 문학관 자료의 효율적인 유통ㆍ관리 및 각종 문학관의 상호 협력을 도모할 필요가 있다는 의견이 있음.\n  이에 누구든지 문학관의 설립ㆍ운영을 지원하기 위하여 자료나 금전 등을 기증 또는 기부할 수 있는 근거 및 문학관 상호간 또는 도서관이나 박물관과 문학관 자료를 교환ㆍ양여ㆍ대여하거나 그 자료의 보관을 위탁할 수 있는 근거를 마련하고, 국립한국문학관으로 하여금 문학관 협력망을 구성하도록 하여 문학관 설립ㆍ운영에 있어 미비한 점을 보완하고자 함(안 제30조의2부터 제30조의4까지 신설 등).",
+    "doc": null,
+    "proposed_session": "제21대 (2020~2024) 제382회",
+    "others_cnt": 1,
+    "coactors": [
+        {
+            "name": "도종환",
+            "name_chinese": "都鍾煥",
+            "congressman_id": "9770755"
+        },
+        {
+            "name": "강선우",
+            "name_chinese": "姜仙祐",
+            "congressman_id": "9771116"
+        },
+        {
+            "name": "김남국",
+            "name_chinese": "金南局",
+            "congressman_id": "9771181"
+        },
+        {
+            "name": "양이원영",
+            "name_chinese": "梁李媛瑛",
+            "congressman_id": "9771287"
+        },
+        {
+            "name": "양정숙",
+            "name_chinese": "梁貞淑",
+            "congressman_id": "9771271"
+        },
+        {
+            "name": "유정주",
+            "name_chinese": "兪訂炷",
+            "congressman_id": "9771266"
+        },
+        {
+            "name": "이규민",
+            "name_chinese": "李圭閔",
+            "congressman_id": "9771191"
+        },
+        {
+            "name": "이병훈",
+            "name_chinese": "李炳勳",
+            "congressman_id": "9771154"
+        },
+        {
+            "name": "이상헌",
+            "name_chinese": "李相憲",
+            "congressman_id": "9771098"
+        },
+        {
+            "name": "이재정",
+            "name_chinese": "李在汀",
+            "congressman_id": "9771060"
+        },
+        {
+            "name": "장경태",
+            "name_chinese": "張耿態",
+            "congressman_id": "9771110"
+        },
+        {
+            "name": "정청래",
+            "name_chinese": "鄭淸來",
+            "congressman_id": "9771114"
+        },
+        {
+            "name": "최혜영",
+            "name_chinese": "崔惠英",
+            "congressman_id": "9771267"
+        }
+    ],
+    "crawled_date": "2020/10/20 21:15:16"
+}
