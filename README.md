@@ -1,5 +1,7 @@
 # openus
 
+[![Join the chat at https://gitter.im/openus-kr/community](https://badges.gitter.im/openus-kr/community.svg)](https://gitter.im/openus-kr/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## parser
 
 ### bill (법률안)
