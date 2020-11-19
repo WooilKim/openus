@@ -11,7 +11,7 @@ billID_list = []
 for page in range(1, 561):
     params = {'strPage': page}
     url = "http://likms.assembly.go.kr/bill/LatestReceiptBill.do"
-    print(page)
+    #print(page)
     source = requests.post(url, data=params)
     plain_text = source.text
     soup = bs(plain_text, 'lxml')
@@ -26,11 +26,8 @@ for page in range(1, 561):
         bill_num_list.append(bill_num)
         l = list(re.findall("\'{1}[\w\d]*\'{1}", title.attrs['href'], re.S))
         billID = l[0][1:-1]
-        #print(billID)
         billID_list.append(billID)
 
-#print(bill_num_list)
-#print(billID_list)
 
 di = {'bill_num' : bill_num_list, 'billID' : billID_list}
 
