@@ -23,5 +23,5 @@ jsondict = json.dumps(dict, indent=4, ensure_ascii=False)
 print(jsondict)
 
 with open('2105964.json', 'w') as f:
-    f.write(json.dumps(jsondict, indent="4", ensure_ascii=False))
+    f.write(jsondict)
     f.flush()
