@@ -7,10 +7,10 @@ url = "https://assembly.go.kr/assm/memact/congressman/memCond/memCondListAjax.do
 
 source = requests.post(url)
 soup = bs(source.text, "lxml")
-
 for tag in soup.select('.memberna_list dl'):
     dict = {}
     name = tag.find('a').text #이름
+    #print(name)
 
     name_han = tag.select_one('.chi').text.strip().replace('(', '').replace(')','') #한문
 
@@ -31,10 +31,8 @@ for tag in soup.select('.memberna_list dl'):
     for tag in id_soup.select('.info_mna > ul'):
         for tag_left in tag.select('.left'):
             profile = tag_left.select('li')
-            birth = profile[3].text
-            dict['생년월일'] = birth #생년월일
-            #print(birth)
-            #print(dict)
+            birth = profile[3].text #생년월일
+            dict['생년월일'] = birth
 
         for tag_right in tag.select('.right > .pro_detail'):
             dd_list = []
@@ -45,9 +43,12 @@ for tag in soup.select('.memberna_list dl'):
             dict['정당'] = dd_list[0]
             dict['선거구'] = dd_list[1]
             dict['소속위원회'] = dd_list[2]
-            dict['당선횟수'] = dd_list[3]
+            dict['선수'] = dd_list[3][:2]
+            dict['당선대수'] = dd_list[3][2:].replace('(', '').replace(')','').replace('대','')
     print(dict)
+    #print(dict)
     jsondict = json.dumps(dict, indent=4, ensure_ascii=False)
-    with open(f'./의원/{name}.json', 'w') as f:
+
+    with open(f'./의원/{name}_{id}.json', 'w') as f:
         f.write(jsondict)
         f.flush()
