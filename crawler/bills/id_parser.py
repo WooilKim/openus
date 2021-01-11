@@ -17,7 +17,7 @@ driver.find_element_by_xpath("//button[@class='btnSch01']").click()
 select = Select(driver.find_element_by_id('pageSizeOption'))
 select.select_by_visible_text('100')
 
-for page in range(1, 73):
+for page in range(1, 74):
     driver.execute_script("GoPage({})".format(page))
     source = driver.page_source
     soup = bs(source, "lxml")
