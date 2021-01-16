@@ -1,12 +1,14 @@
 import requests
 from bs4 import BeautifulSoup as bs
+import re
 import json
+import pandas as pd
 
 #def load_file():
 f = open(f"21st_id.json", encoding="UTF-8")
 raw_data = json.loads(f.read())
 
-for i in range(0, 7016):
+for i in range(0, 7235):
     url = "https://likms.assembly.go.kr/bill/billDetail.do?billId=" + raw_data[i]["id"]
     source = requests.post(url)
     soup = bs(source.text, 'lxml')
@@ -40,9 +42,17 @@ for i in range(0, 7016):
         #print(df_dict)
         table_dict[caption_text] = df_dict
 
+    if soup.select('div#summaryContentDiv'):
+        ss = soup.select('div#summaryContentDiv')
+        table_dict['의안접수정보']['제안이유 및 주요내용'] = ss[0].text.strip()
+
+    #print(table_dict)
+
+
     jsondict = json.dumps(table_dict, indent=4, ensure_ascii=False)
+
     with open(f'./의안정리/{bill_num}.json', 'w') as f:
         f.write(jsondict)
         f.flush()
-
     print(jsondict)
+    print(bill_num)
