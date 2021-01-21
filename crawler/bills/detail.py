@@ -5,13 +5,17 @@ import pandas as pd
 import json
 
 
-url = "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_N2Q0Y0W7K0K6L1S0K3N2Y1C1F4O9J7"
+url = "https://likms.assembly.go.kr/bill/billDetail.do?billId=PRC_T2V0G0N6K0I1R1H6D5L5E0Q7O3T7Z9"
 source = requests.post(url)
 soup = bs(source.text, 'lxml')
 # 의안 상세 페이지
 table_dict = {}
 bill_num = soup.select('table > tbody > tr > td')[0].text # 의안번호
-print(bill_num)
+#print(bill_num)
+file = soup.select('table > tbody > tr > td > a')
+#print(file)
+
+"""
 for caption in soup.find_all("caption"): # 테이블 명 찾기
     print(caption.text)
     caption_text = caption.text
@@ -38,9 +42,16 @@ for caption in soup.find_all("caption"): # 테이블 명 찾기
     #print(df_dict)
     table_dict[caption_text] = df_dict
 
+
+#http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=D2A2D401-9E69-4586-7A05-A82E79FBF1E7&type=0
+#'http://likms.assembly.go.kr/filegate/servlet/FileGate','D2A2D401-9E69-4586-7A05-A82E79FBF1E7','0'
+
 jsondict = json.dumps(table_dict, indent=4, ensure_ascii=False)
+print(jsondict)
+
 with open(f'./의안정리/{bill_num}.json', 'w') as f:
     f.write(jsondict)
     f.flush()
 
 print(jsondict)
+"""
