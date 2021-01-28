@@ -11,7 +11,7 @@ age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "1
 today = date.today()
 
 def load_file(age):
-    f = open(f"./id/{age}_id_v1.json", encoding="UTF-8")
+    f = open(f"./id_v2/{age}_id_v2.json", encoding="UTF-8")
     raw_data = json.loads(f.read())
     return raw_data
 
@@ -65,12 +65,12 @@ def detail_parser():
             print(jsondict)
 
             # 저장 폴더 생성
-            folder = age + "_bill"
+            folder = age + "_bill_v2"
             if not os.path.exists(folder):
                 os.mkdir(folder)
 
             # 저장
-            with open(f'./{age}_bill/{bill_num}_{today}_v1.json', 'w') as f:
+            with open(f'./{age}_bill_v2/{bill_num}_{today}_v2.json', 'w') as f:
                 f.write(jsondict)
                 f.flush()
 
