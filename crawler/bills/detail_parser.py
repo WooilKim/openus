@@ -36,7 +36,7 @@ def detail_parser():
             table_dict = {}
             try:
                 bill_num = soup.select('table > tbody > tr > td')[0].text # 의안번호
-            except:
+            except: #에러 발생 시 의안 분류
                 #print(raw_data[i]["의안번호"])
                 error_dict = {}
                 error_dict['의안번호'] = raw_data[i]["의안번호"]
