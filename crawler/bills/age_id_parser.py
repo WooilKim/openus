@@ -7,8 +7,9 @@ from selenium.webdriver.support.ui import Select
 import json
 
 
-age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]
-driver = webdriver.Chrome('/Users/WonyongSeo/Documents/crawling/chromedriver')
+age_list = ["21"]
+# age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]
+driver = webdriver.Chrome('/Users/wooil/chromedriver')
 
 for i in age_list:
     dict_list = []
@@ -58,6 +59,6 @@ for i in age_list:
 
     jsondict = json.dumps(dict_list, indent=4, ensure_ascii=False)
 
-    with open(f'./id_v2/{i}_id_v2.json', 'w') as f:
+    with open(f'./id_v3/{i}_id_v3.json', 'w') as f:
         f.write(jsondict)
         f.flush()
