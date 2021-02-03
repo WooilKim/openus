@@ -14,8 +14,8 @@ bill_num = soup.select('table > tbody > tr > td')[0].text # 의안번호
 print(bill_num)
 file = soup.select('table > tbody > tr > td > a')
 for href in file:
-    print(href)
-    l = re.findall("\'[\d]*\'{1}", href.attrs['href'], re.S)
+    #print(href)
+    l = re.findall("\'[\w\d]*\'{1}", href.attrs['href'], re.S)
     print(l)
 
 """
