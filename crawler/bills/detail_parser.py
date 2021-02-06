@@ -3,17 +3,24 @@ from bs4 import BeautifulSoup as bs
 import re
 import json
 import pandas as pd
-from datetime import date
+from datetime import datetime
 from requests import get
 import os
+from urllib.request import urlopen, urlretrieve
+from urllib.request import urlretrieve
+import urllib
+import cgi
+import ssl
 
-age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
-            "16", "17", "18", "19", "20", "21"]
+#파일명 인코딩 과정 
+ssl._create_default_https_context = ssl._create_unverified_context
+age_list = ["21"]#["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
+            #"16", "17", "18", "19", "20", "21"]
 
 # parsed date
-today = date.today()
-date_dict = {}
-date_dict['parsed_date'] = today
+#today = date.today()
+#date_dict = {}
+#date_dict['parsed_date'] = today
 
 
 
@@ -33,7 +40,7 @@ def detail_parser():
         if not os.path.exists(folder):
             os.mkdir(folder)
 
-        for i in range(id_count):
+        for i in reversed(range(id_count)):
             url = "https://likms.assembly.go.kr/bill/billDetail.do?billId=" + raw_data[i]["id"]
             source = requests.post(url)
             soup = bs(source.text, 'lxml')
@@ -85,35 +92,38 @@ def detail_parser():
                 #print(a)
                 href = a.attrs['href']
 
-                if 'openBillFile' in href: #파일 형식 hwp, pdf 2종류
+                if 'openBillFile' in href:
                     td = a.parent
 
                     k = re.findall("\'{1}(.*?)\'{1}", href)
                     #print(k)
                     fileID = k[1]
-                    filetype = k[2] # 파일 형식 구분
+                    filetype = k[2]
 
                     file_url = "http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=" + fileID + "&type=" + filetype
                     print(file_url)
 
-                    #파일 폴더 생성
                     file_folder = bill_num + "_file"
                     folder_path = folder + "/" + file_folder
                     if not os.path.exists(folder_path):
                         os.mkdir(folder_path)
 
-                    if filetype == '0': # hwp 저장
-                        with open(f'./{folder}/{file_folder}/{fileID}.hwp', 'wb') as f:
-                            response = get(file_url)
-                            f.write(response.content)
-                            f.flush()
-                    elif filetype == '1': # pdf 저장
+                    if filetype == '0':
+                        remotefile = urlopen(file_url)
+                        blah = remotefile.info()['Content-Disposition']
+                        value, params = cgi.parse_header(blah)
+                        filename = params["filename"]
+                        filename = urllib.parse.unquote(filename)
+                        print(filename)
+                        urlretrieve(url, filename)
+
+                    elif filetype == '1':
                         with open(f'./{folder}/{file_folder}/{fileID}.pdf', 'wb') as f:
                             response = get(file_url)
                             f.write(response.content)
                             f.flush()
 
-                elif 'ConfFile' in href: # pdf만 존재하는 형식
+                elif 'ConfFile' in href:
                     k = re.findall("\'{1}(.*?)\'{1}", href)
                     fileID = k[1]
                     conf_url = "http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM="+fileID
@@ -132,11 +142,40 @@ def detail_parser():
                     continue
             #table_dict.update(date_dict)
 
+            if age == "21":
+                coactorurl = "http://likms.assembly.go.kr/bill/coactorListPopup.do?billId=" + raw_data[i]["id"]
+                coactorsource = requests.get(coactorurl)
+                coactorsoup = bs(coactorsource.text, 'lxml')
+                coactors = list()
+                for c in coactorsoup.select('a'):
+
+                    name, remain = c.text.split('(')
+                    party, remain = remain.split('/')
+                    name_chinese, _ = remain.split(')')
+                    coactorID = c['href'][-7:]
+                    #print(c['href'])
+                    #print(name, party, name_chinese)
+                    with open(f"./의원/{name}_{coactorID}.json", "r", encoding="UTF-8") as f:
+                        coactor_data = json.load(f)
+                        coactor_data['제안의안'].append({
+                            "의안번호":raw_data[i]["의안번호"],
+                            "id":raw_data[i]["id"]
+                        })
+                    with open(f"./의원/{name}_{coactorID}.json", "w") as s:
+                        json.dump(coactor_data, s, indent=4)
+
+                    try:
+                        coactors.append({'name': name, 'name_chinese': name_chinese, 'congressman_id': c['href'][-7:]})
+                    except:
+                        coactors.append({'name': name, 'name_chinese': name_chinese, 'congressman_id': None})
+
+                #jsondict['coactors'] = coactors
+
+
             jsondict = json.dumps(table_dict, indent=4, ensure_ascii=False)
 
-            # jsondict['parsed_date'] = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+            #jsondict['parsed_date'] = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
             # print(jsondict)
-
 
 
             # 저장
