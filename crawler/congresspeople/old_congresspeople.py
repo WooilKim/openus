@@ -32,7 +32,7 @@ for age in age_list:
     # 의원 json 다운로드
     driver.find_element_by_xpath("//*[@id='sheet-json-button']").click()
     time.sleep(5)
-    
+
     # json 디렉터리 변경
     src = "/Users/WonyongSeo/Downloads/"
     filename = "역대국회의원인적사항.json"
@@ -43,6 +43,7 @@ for age in age_list:
     raw_data = json.loads(f.read())
 
     for i in range(1, len(raw_data)):
+        index = format(i, '03')
         dict = {}
         name = raw_data[i]["HG_NM"]
         dict['이름'] = name
@@ -55,6 +56,6 @@ for age in age_list:
         print(dict)
         jsondict = json.dumps(dict, indent=4, ensure_ascii=False)
 
-        with open(f'./의원/{age_}/{i}_{name}.json', 'w') as f:
+        with open(f'./의원/{age_}/{index}_{name}.json', 'w') as f:
             f.write(jsondict)
             f.flush()
