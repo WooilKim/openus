@@ -7,25 +7,27 @@ from datetime import datetime
 from requests import get
 import os
 from urllib.request import urlopen, urlretrieve
-from urllib.request import urlretrieve
 import urllib
 import cgi
 import ssl
 
-#파일명 인코딩 과정 
+#파일명 인코딩 과정
 ssl._create_default_https_context = ssl._create_unverified_context
-age_list = ["21"]#["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
-            #"16", "17", "18", "19", "20", "21"]
+age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
+            "16", "17", "18", "19", "20", "21"]
 
 # parsed date
 #today = date.today()
 #date_dict = {}
 #date_dict['parsed_date'] = today
 
+#의안 저장 폴더 생성
+version = "v3"
+if not os.path.exists(version):
+    os.mkdir(version)
 
-
-def load_file(age):
-    f = open(f"./id_v2/{age}_id_v2.json", encoding="UTF-8")
+def load_file(age, version):
+    f = open(f"./id_{version}/{age}_id_{version}.json", encoding="UTF-8")
     raw_data = json.loads(f.read())
     return raw_data
 
@@ -33,10 +35,10 @@ def load_file(age):
 def detail_parser():
     err = []
     for age in age_list:
-        raw_data = load_file(age)
+        raw_data = load_file(age, version)
         id_count = len(raw_data)
         # 저장 폴더 생성
-        folder = age + "_bill_v3"
+        folder = version + "/" + age + "_bill_" + version
         if not os.path.exists(folder):
             os.mkdir(folder)
 
@@ -108,22 +110,30 @@ def detail_parser():
                     if not os.path.exists(folder_path):
                         os.mkdir(folder_path)
 
-                    if filetype == '0':
+                    if filetype == '0': # hwp 형식 파일
                         remotefile = urlopen(file_url)
                         blah = remotefile.info()['Content-Disposition']
                         value, params = cgi.parse_header(blah)
                         filename = params["filename"]
                         filename = urllib.parse.unquote(filename)
-                        print(filename)
-                        urlretrieve(url, filename)
+                        filepath = folder_path + "/" + filename
+                        print(filepath)
+                        urlretrieve(url, filepath)
 
-                    elif filetype == '1':
-                        with open(f'./{folder}/{file_folder}/{fileID}.pdf', 'wb') as f:
-                            response = get(file_url)
-                            f.write(response.content)
-                            f.flush()
+                    elif filetype == '1': # pdf 형식 파일
+                        remotefile = urlopen(file_url)
+                        blah = remotefile.info()['Content-Disposition']
+                        value, params = cgi.parse_header(blah)
+                        filename = params["filename"]
+                        filename = urllib.parse.unquote(filename)
+                        filepath = folder_path + "/" + filename
+                        print(filepath)
+                        urlretrieve(url, filepath)
+                    else:
+                        print("unexpected error")
+                        print(bill_num)
 
-                elif 'ConfFile' in href:
+                elif 'ConfFile' in href: # pdf 회의록 요약
                     k = re.findall("\'{1}(.*?)\'{1}", href)
                     fileID = k[1]
                     conf_url = "http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM="+fileID
@@ -134,43 +144,17 @@ def detail_parser():
                     if not os.path.exists(folder_path):
                         os.mkdir(folder_path)
 
-                    with open(f'./{folder}/{file_folder}/{fileID}.pdf', 'wb') as f:
-                        response = get(conf_url)
-                        f.write(response.content)
-                        f.flush()
+                    remotefile = urlopen(conf_url)
+                    blah = remotefile.info()['Content-Disposition']
+                    value, params = cgi.parse_header(blah)
+                    filename = params["filename"]
+                    filename = urllib.parse.unquote(filename)
+                    filepath = folder_path + "/" + filename
+                    print(filepath)
+                    urlretrieve(url, filepath)
+
                 else:
                     continue
-            #table_dict.update(date_dict)
-
-            if age == "21":
-                coactorurl = "http://likms.assembly.go.kr/bill/coactorListPopup.do?billId=" + raw_data[i]["id"]
-                coactorsource = requests.get(coactorurl)
-                coactorsoup = bs(coactorsource.text, 'lxml')
-                coactors = list()
-                for c in coactorsoup.select('a'):
-
-                    name, remain = c.text.split('(')
-                    party, remain = remain.split('/')
-                    name_chinese, _ = remain.split(')')
-                    coactorID = c['href'][-7:]
-                    #print(c['href'])
-                    #print(name, party, name_chinese)
-                    with open(f"./의원/{name}_{coactorID}.json", "r", encoding="UTF-8") as f:
-                        coactor_data = json.load(f)
-                        coactor_data['제안의안'].append({
-                            "의안번호":raw_data[i]["의안번호"],
-                            "id":raw_data[i]["id"]
-                        })
-                    with open(f"./의원/{name}_{coactorID}.json", "w") as s:
-                        json.dump(coactor_data, s, indent=4)
-
-                    try:
-                        coactors.append({'name': name, 'name_chinese': name_chinese, 'congressman_id': c['href'][-7:]})
-                    except:
-                        coactors.append({'name': name, 'name_chinese': name_chinese, 'congressman_id': None})
-
-                #jsondict['coactors'] = coactors
-
 
             jsondict = json.dumps(table_dict, indent=4, ensure_ascii=False)
 
@@ -179,14 +163,14 @@ def detail_parser():
 
 
             # 저장
-            with open(f'./{folder}/{bill_num}_v3.json', 'w') as f:
+            with open(f'./{folder}/{bill_num}_{version}.json', 'w') as f:
                 f.write(jsondict)
                 f.flush()
 
             print(bill_num)
 
     jsonerror = json.dumps(err, indent=4, ensure_ascii=False)
-    with open(f'./error_bill.json', 'w') as f:
+    with open(f'./{version}/error_bill.json', 'w') as f:
         f.write(jsonerror)
         f.flush()
 
