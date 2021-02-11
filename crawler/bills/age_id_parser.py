@@ -5,11 +5,20 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import json
+import os
 
+# 21대 id를 가져올 때 버전 갱신
+version = "v4"
 
+# 1-20대 id는 v2에서 가져왔으므로 id_v2 사용 
+old_age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
 age_list = ["21"]
-# age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"]
-driver = webdriver.Chrome('/Users/wooil/chromedriver')
+driver = webdriver.Chrome('/Users/WonyongSeo/Documents/crawling/chromedriver')
+
+# id_version 폴더 생성
+id_version = "id_" + version
+if not os.path.exists(id_version):
+    os.mkdir(id_version)
 
 for i in age_list:
     dict_list = []
@@ -59,6 +68,6 @@ for i in age_list:
 
     jsondict = json.dumps(dict_list, indent=4, ensure_ascii=False)
 
-    with open(f'./id_v3/{i}_id_v3.json', 'w') as f:
+    with open(f'./id_{version}/{i}_id_{version}.json', 'w') as f:
         f.write(jsondict)
         f.flush()
