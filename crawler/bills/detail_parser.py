@@ -16,20 +16,29 @@ ssl._create_default_https_context = ssl._create_unverified_context
 age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
             "16", "17", "18", "19", "20", "21"]
 
+#1-20대 id는 v2에서 전부 가져옴
+v2_age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
+               "16", "17", "18", "19", "20"]
+
 # parsed date
 #today = date.today()
 #date_dict = {}
 #date_dict['parsed_date'] = today
 
 #의안 저장 폴더 생성
-version = "v3"
+version = "v4"
 if not os.path.exists(version):
     os.mkdir(version)
 
 def load_file(age, version):
-    f = open(f"./id_{version}/{age}_id_{version}.json", encoding="UTF-8")
-    raw_data = json.loads(f.read())
-    return raw_data
+    if age in v2_age_list: #1-20대 의안은 v2에서 가져옴.
+        f = open(f"./id_v2/{age}_id_v2.json", encoding="UTF-8")
+        raw_data = json.loads(f.read())
+        return raw_data
+    else:
+        f = open(f"./id_{version}/{age}_id_{version}.json", encoding="UTF-8")
+        raw_data = json.loads(f.read())
+        return raw_data
 
 
 def detail_parser():
@@ -41,6 +50,11 @@ def detail_parser():
         folder = version + "/" + age + "_bill_" + version
         if not os.path.exists(folder):
             os.mkdir(folder)
+
+        file_folder = version + "/" + age + "_file_" + version
+        if not os.path.exists(file_folder):
+            os.mkdir(file_folder)
+
 
         for i in reversed(range(id_count)):
             url = "https://likms.assembly.go.kr/bill/billDetail.do?billId=" + raw_data[i]["id"]
@@ -105,10 +119,9 @@ def detail_parser():
                     file_url = "http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=" + fileID + "&type=" + filetype
                     print(file_url)
 
-                    file_folder = bill_num + "_file"
-                    folder_path = folder + "/" + file_folder
-                    if not os.path.exists(folder_path):
-                        os.mkdir(folder_path)
+                    file_save = file_folder + "/" + bill_num + "_file"
+                    if not os.path.exists(file_save):
+                        os.mkdir(file_save)
 
                     if filetype == '0': # hwp 형식 파일
                         remotefile = urlopen(file_url)
@@ -116,7 +129,8 @@ def detail_parser():
                         value, params = cgi.parse_header(blah)
                         filename = params["filename"]
                         filename = urllib.parse.unquote(filename)
-                        filepath = folder_path + "/" + filename
+                        filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
+                        filepath = file_save + "/" + filename
                         print(filepath)
                         urlretrieve(url, filepath)
 
@@ -126,7 +140,8 @@ def detail_parser():
                         value, params = cgi.parse_header(blah)
                         filename = params["filename"]
                         filename = urllib.parse.unquote(filename)
-                        filepath = folder_path + "/" + filename
+                        filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
+                        filepath = file_save + "/" + filename
                         print(filepath)
                         urlretrieve(url, filepath)
                     else:
@@ -139,23 +154,24 @@ def detail_parser():
                     conf_url = "http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM="+fileID
                     print(conf_url)
 
-                    file_folder = bill_num + "_file"
-                    folder_path = folder + "/" + file_folder
-                    if not os.path.exists(folder_path):
-                        os.mkdir(folder_path)
+                    file_save = file_folder + "/" + bill_num + "_file"
+                    if not os.path.exists(file_save):
+                        os.mkdir(file_save)
 
                     remotefile = urlopen(conf_url)
                     blah = remotefile.info()['Content-Disposition']
                     value, params = cgi.parse_header(blah)
                     filename = params["filename"]
                     filename = urllib.parse.unquote(filename)
-                    filepath = folder_path + "/" + filename
+                    filepath = file_save + "/" + filename
                     print(filepath)
                     urlretrieve(url, filepath)
 
                 else:
                     continue
 
+            # 파싱한 날짜 기록
+            table_dict['parsed_date'] = datetime.now().strftime("%Y-%m-%d")
             jsondict = json.dumps(table_dict, indent=4, ensure_ascii=False)
 
             #jsondict['parsed_date'] = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
