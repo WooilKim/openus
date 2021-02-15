@@ -6,7 +6,7 @@ import pandas as pd
 from datetime import datetime
 from requests import get
 import os
-from urllib.request import urlopen, urlretrieve
+from urllib.request import urlopen, urlretrieve, Request
 import urllib
 import cgi
 import ssl
@@ -124,7 +124,8 @@ def detail_parser():
                         os.mkdir(file_save)
 
                     if filetype == '0': # hwp 형식 파일
-                        remotefile = urlopen(file_url)
+                        req = Request(file_url, headers={'User-Agent': 'Mozilla/5.0'})
+                        remotefile = urlopen(req)
                         blah = remotefile.info()['Content-Disposition']
                         value, params = cgi.parse_header(blah)
                         filename = params["filename"]
@@ -135,7 +136,8 @@ def detail_parser():
                         urlretrieve(url, filepath)
 
                     elif filetype == '1': # pdf 형식 파일
-                        remotefile = urlopen(file_url)
+                        req = Request(file_url, headers={'User-Agent': 'Mozilla/5.0'})
+                        remotefile = urlopen(req)
                         blah = remotefile.info()['Content-Disposition']
                         value, params = cgi.parse_header(blah)
                         filename = params["filename"]
@@ -158,7 +160,8 @@ def detail_parser():
                     if not os.path.exists(file_save):
                         os.mkdir(file_save)
 
-                    remotefile = urlopen(conf_url)
+                    req = Request(conf_url, headers={'User-Agent': 'Mozilla/5.0'})
+                    remotefile = urlopen(req)
                     blah = remotefile.info()['Content-Disposition']
                     value, params = cgi.parse_header(blah)
                     filename = params["filename"]
