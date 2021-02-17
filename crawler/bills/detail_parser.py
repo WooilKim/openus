@@ -13,11 +13,11 @@ import ssl
 
 #파일명 인코딩 과정
 ssl._create_default_https_context = ssl._create_unverified_context
-age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
+age_list = ["03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
             "16", "17", "18", "19", "20", "21"]
 
 #1-20대 id는 v2에서 전부 가져옴
-v2_age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
+v2_age_list = ["03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
                "16", "17", "18", "19", "20"]
 
 # parsed date
@@ -57,7 +57,9 @@ def detail_parser():
 
 
         for i in reversed(range(id_count)):
-            url = "https://likms.assembly.go.kr/bill/billDetail.do?billId=" + raw_data[i]["id"]
+            billID = raw_data[i]["id"]
+            url = "https://likms.assembly.go.kr/bill/billDetail.do?billId=" + billID
+            print(url)
             source = requests.post(url)
             soup = bs(source.text, 'lxml')
 
@@ -102,6 +104,34 @@ def detail_parser():
             if soup.select('div#summaryContentDiv'):
                 ss = soup.select('div#summaryContentDiv')
                 table_dict['의안접수정보']['제안이유 및 주요내용'] = ss[0].text.strip()
+
+            if age == "21": # 의원이 제안한 의안
+                coactorurl = "http://likms.assembly.go.kr/bill/coactorListPopup.do?billId=" + billID
+                print(coactorurl)
+                coactorsource = requests.get(coactorurl)
+                coactorsoup = bs(coactorsource.text, 'lxml')
+                coactors = list()
+                for c in coactorsoup.select('a'):
+                    name, remain = c.text.split('(')
+                    party, remain = remain.split('/')
+                    name_chinese, _ = remain.split(')')
+
+                    name = name.replace('\t', '').replace('\n', '')
+                    coactorid = c['href'][-7:]
+
+                    try:
+                        coactors.append({'name': name, 'name_chinese': name_chinese, 'congressman_id': coactorid})
+                    except:
+                        coactors.append({'name': name, 'name_chinese': name_chinese, 'congressman_id': None})
+                    bill_dict = {'의안번호': bill_num, 'id': billID}
+                    with open(f'./의원/21/{name}_{coactorid}.json', 'r') as f:
+                        data = json.load(f)
+                    data["제안의안"] = bill_dict
+                    with open(f'./의원/21/{name}_{coactorid}.json', 'w') as f:
+                        json.dump(data, f, indent=4, ensure_ascii=False)
+                # print(name, party, name_chinese, c['href'][58:])
+                print(coactors)
+                table_dict['의안접수정보']['제안자'] = coactors
 
             # 의안 파일 다운로드
             for a in soup.select('table > tbody > tr > td > a'):
