@@ -1,0 +1,1411 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ -->
+
+
+
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+	<title>의안정보시스템</title>
+<!-- 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" /> -->
+	<link rel="stylesheet" type="text/css" href="/bill/css/main.css" /> 
+	<link rel="stylesheet" type="text/css" href="/bill/css/sub.css" /> 
+	
+	
+	<script src="/bill/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/validation.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/printThis.js"  type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src='/bill/js/paging.js'  type="text/javascript" charset="utf-8"></script>
+	
+
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ -->
+
+
+
+
+
+
+
+<form name="commForm" method="post" action="/bill/BonConfFinishBill.do">
+	<input type="hidden" name="billId" value="002268" />
+	<input type="hidden" name="srchBillResultCd" value="" />
+	<input type="hidden" name="sessionCd" value="" />
+	<input type="hidden" name="currentsCd" value="" />
+	<input type="hidden" name="currentsDt" value="" />
+	<input type="hidden" name="billNo" value="" />
+	<input type="hidden" name="billName" value='' />
+	<input type="hidden" name="simsaBonmun" value='' />
+	<input type="hidden" name="ageFrom" value="" />
+	<input type="hidden" name="ageTo" value="" />
+	<input type="hidden" name="age" value="" />
+	<input type="hidden" name="dateFrom" value="" />
+	<input type="hidden" name="dateTo" value="" />
+	<input type="hidden" name="procFrom" value="" />
+	<input type="hidden" name="procTo" value="" />
+	<input type="hidden" name="dispFrom" value="" />
+	<input type="hidden" name="dispTo" value="" />
+	<input type="hidden" name="proposeFrom" value="" />
+	<input type="hidden" name="proposeTo" value="" />
+	<input type="hidden" name="submitFrom" value="" />
+	<input type="hidden" name="submitTo" value="" />
+	<input type="hidden" name="billNoFrom" value="" />
+	<input type="hidden" name="billNoTo" value="" />
+	<input type="hidden" name="billKind" value="" />
+	<input type="hidden" name="billKind2" value="" />
+	<input type="hidden" name="billKindExclude" value="" />
+	<input type="hidden" name="chargeCommittee" value="" />
+	<input type="hidden" name="chargeCommitteeName" value="" />
+	<input type="hidden" name="proposerKind" value="" />
+	<input type="hidden" name="proposer" value='' />
+	<input type="hidden" name="hjNm" value="" />
+	<input type="hidden" name="statsType" value="" />
+	<input type="hidden" name="proposeGubn" value="" />
+	<input type="hidden" name="generalResult" value="" />
+	<input type="hidden" name="generalResultType" value="" />			
+	<input type="hidden" name="committeeResult" value="" />
+	<input type="hidden" name="periodFrom" value="" />
+	<input type="hidden" name="periodTo" value="" />
+	<input type="hidden" name="budgetYn" value="" />
+	<input type="hidden" name="billGbnAmendment" value="" />			
+	<input type="hidden" name="orderColumn" value="" />
+	<input type="hidden" name="orderType" value="" />
+	<input type="hidden" name="lastQuery" value="" />
+	<input type="hidden" name="strPage"  value="" />
+	<input type="hidden" name="pageSize"  value="" />
+	<input type="hidden" name="maxPage"  value="" />
+	<input type="hidden" name="billparam"  value="" />
+	<input type="hidden" name="allCount" value="" />
+	<input type="hidden" name="resultCount" value="" />
+	<input type="hidden" name="mooring" value="" />
+	<input type="hidden" name="statsKind" value="" />
+	<input type="hidden" name="ageCheck" value="" />
+	<input type="hidden" name="tabMenuType" value="billDetailSearch" />
+</form>
+
+		<div class="headerWrap">
+			<div class="top inner">
+				<h1><a href="/bill"><img src="/bill/images/common/main_logo.png" alt="의안정보시스템" /></a></h1>
+				<ul class="siteMenu">
+					<li><a href="/bill">HOME</a> |</li>
+					<li><a href="http://likms.assembly.go.kr/nsrch" target="_blank">입법정보 통합검색</a></li>
+				</ul>
+			</div>
+			<div class="gnb">
+				<div class="inner">
+				<ul class="gnbList">
+					<li class="gnbL1">
+						<a href="/bill/info/Summary.do?tabMenuType=billInfo_1" class="depth1">의안개요</a>
+						<ul class="depth2">
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_1">의안의 의의</a></li>
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_2">의안의 종류</a></li>
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_3">의안의 일반적 심의절차</a></li>
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_4">용어해설</a></li>
+						</ul>
+					</li>
+					<li class="gnbL2">
+						<a href="/bill/BillSearchSimple.do" class="depth1">의안검색</a>
+						<ul class="depth2">
+							<li><a href="/bill/BillSearchSimple.do">간편검색</a></li>
+							<li>
+								<a href="/bill/BillSearchDetail.do">상세검색</a>
+								<ul class="depth3">
+									<li><a href="/bill/BillSearchDetail.do">의안상세</a></li>
+									<li><a href="/bill/BillSearchSimsa.do">심사보고서</a></li>
+									<li><a href="/bill/BillSearchLaw.do">발의법률안</a></li>
+									<li><a href="/bill/BillSearchProposal.do">제안이유 및 주요내용</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+							<!--2019-01-09 최근 본회의처리 법률안 추가요청 start-->
+							<!--2019-01-09 스타일 gnbL3->gnbL1 로 변경-->
+					<li class="gnbL3">
+						<a href="/bill/FinishBill.do" class="depth1">의안현황</a>
+						<ul class="depth2">
+							<!--2019-01-09 최근 본회의처리 법률안 추가요청 end-->
+							<li>
+								<a href="/bill/FinishBill.do">처리의안</a>
+								<ul class="depth3">
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=가결">가결</a></li>
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=대안반영">대안반영</a></li>
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=부결">부결</a></li>
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=기타">기타</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="/bill/MooringBill.do">계류의안</a>
+							</li>
+							<li>
+								<a href="/bill/SuggestBill.do">위원회안(대안)</a>
+							</li>
+							<li>
+								<a href="/bill/BeforePropose.do">본회의부의안건</a>
+							</li>
+							<li>
+								<a href="/bill/PassedBill.do">최근 본회의 처리법률안</a>
+							</li>
+						</ul>
+					</li>
+					<li class="gnbL4">
+						<a href="/bill/stat/statFinishBillSearch.do" class="depth1">의안통계</a>
+						<ul class="depth2">
+							<li>
+								<a href="/bill/stat/statFinishBillSearch.do">처리의안통계</a>
+							</li>
+							<li>
+								<a href="/bill/stat/statMooringBill.do">계류의안통계</a>
+							</li>
+						</ul>
+					</li>
+					<li class="gnbL5">
+						<a href="/bill/ReportList.do" class="depth1">연차보고서</a>
+						<div class="depth2">
+						</div>
+					</li>
+					<li class="gnbL6">
+						<a href="/bill/PetitionFinish.do" class="depth1">청원</a>
+						<ul class="depth2">
+							<li>
+								<a href="/bill/PetitionFinish.do">청원현황</a>
+							</li>
+							<li>
+								<a href="/bill/PetitionSearch.do">청원검색</a>
+							</li>
+							<li>
+								<a href="/bill/PetitionStat.do">청원통계</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+				<div class="allMenu"><a href="#"><img src="/bill/images/common/allMenu.png" alt="전체메뉴보기" /></a></div>
+				</div>
+				<div class="allmenuOpen layerpop">
+					<div class="layti">의안정보시스템 전체메뉴</div>
+					<div class="menuList">
+						<ul class="menuListA">
+							<li style="width:220px;">
+								<a href="/bill/info/Summary.do?tabMenuType=billInfo_1" class="depth01">의안개요</a>
+								<ul class="depth02">
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_1">의안의 의의</a></li>
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_2">의안의 종류</a></li>
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_3">의안의 일반적 심의절차</a></li>
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_4">용어해설</a></li>
+								</ul>
+							</li>
+							<li style="width:207px;">
+								<a href="/bill/BillSearchSimple.do" class="depth01">의안검색</a>
+								<ul class="depth02">
+									<li><a href="/bill/BillSearchSimple.do">간편검색</a></li>
+									<li>
+										<a href="/bill/BillSearchDetail.do">상세검색</a>
+										<ul class="depth03">
+											<li><a href="/bill/BillSearchDetail.do">의안상세</a></li>
+											<li><a href="/bill/BillSearchSimsa.do">심사보고서</a></li>
+											<li><a href="/bill/BillSearchLaw.do">발의법률안</a></li>
+											<li><a href="/bill/BillSearchProposal.do">제안이유 및 주요내용</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li style="width:190px;">
+								<a href="/bill/FinishBill.do" class="depth01">의안현황</a>
+								<ul class="depth02">
+									<li>
+										<a href="/bill/FinishBill.do">처리의안</a>
+										<ul class="depth03">
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=가결">가결</a></li>
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=대안반영">대안반영</a></li>
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=부결">부결</a></li>
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=기타">기타</a></li>
+										</ul>
+									</li>
+										<li><a href="/bill/MooringBill.do">계류의안</a></li>
+										<li><a href="/bill/BeforePropose.do">본회의부의안건</a></li>
+								</ul>
+							</li>
+							<li style="width:180px;">
+								<a href="/bill/stat/statFinishBillSearch.do" class="depth01">의안통계</a>
+								<ul class="depth02">
+									<li><a href="/bill/stat/statFinishBillSearch.do">처리의안통계</a></li>
+									<li><a href="/bill/stat/statMooringBill.do">계류의안통계</a></li>
+								</ul>
+							</li>
+							<li style="width:200px;">
+								<a href="/bill/ReportList.do" class="depth01">연차보고서</a>
+							</li>
+							<li style="width:160px;">
+								<a href="/bill/PetitionFinish.do" class="depth01">청원</a>
+								<ul class="depth02">
+									<li><a href="/bill/PetitionFinish.do">청원현황</a></li>
+									<li><a href="/bill/PetitionSearch.do">청원검색</a></li>
+									<li><a href="/bill/PetitionStat.do">청원통계</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="menuListA">
+							<li style="width:230px;">
+								<a href="/bill/nafs/nafsList.do?tabMenuType=BudgLaw" class="depth01">예산정보</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=BudgLaw">예산안현황</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=BudgRef">참고정보</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=BudgDecsn">확정예산</a></li>
+								</ul>
+							</li>
+							<li style="width:250px;">
+								<a href="/bill/nafs/nafsList.do?tabMenuType=StlmtLaw" class="depth01">결산정보</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=StlmtLaw">결산현황</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=StlmtRef">참고정보</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=StlmtSijung">시정요구및조치결과</a></li>
+								</ul>
+							</li>
+							<li style="width:235px;">
+								<a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_1" class="depth01">예산결산안내</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_1">예산</a></li>
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_2">결산</a></li>
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_3">기금</a></li>
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_4">임대형 민자사업(BTL)한도액안</a></li>
+								</ul>
+							</li>
+							<li style="width:210px;">
+								<a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_1" class="depth01" target="_blank">용어사전</a>
+							</li>
+							<li style="width:230px;">
+								<a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_1" class="depth01">관련법령</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_1">예산회계관련법령</a></li>
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_2">특별회계관련법령</a></li>
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_3">기금관련법령</a></li>
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_4">조세및지방세관련법령</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="menuListB">
+							<li><a href="/bill/BonConfFinishBill.do">본회의처리의안</a></li>
+							<li><a href="/bill/billVoteResult.do">본회의표결정보</a></li>
+							<li><a href="/bill/LatestPassedBill.do">최근통과의안</a></li>
+							<li><a href="/bill/LatestReceiptBill.do">최근접수의안</a></li>
+						</ul>
+						<ul class="menuListC mt40">
+							<li><a href="http://likms.assembly.go.kr/nsrch" target="_blank">입법정보 통합검색</a></li>
+							<li><a href="/bill/notice/noticeList.do">공지사항</a></li>
+							<li><a href="http://committee.na.go.kr/portal/" target="_blank">위원회</a></li>
+							<li><a href="/bill/info/Persnalinfo.do?tabMenuType=persnalinfo">개인정보처리방침</a></li>
+							<li><a href="/bill/info/HelpDesk.do?tabMenuType=helpdesk_1">도움말</a></li>
+						</ul>
+					</div>
+
+					<button type="button" class="btnClose"><img src="/bill/images/icon/icon_close.png" alt="창닫기" /></button>
+				</div>
+				
+				<div class="bg_depth"></div>
+				<div class="bg_dim"></div>
+				
+			</div>
+		</div>
+		
+	
+
+		<!-- 컨텐츠 -->
+		<div class="contentWrap">
+			<!-- LNB -->
+			
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ -->
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+			
+	
+				
+	
+			
+	
+	
+			<div class="subLnb">
+				<h2 class="titLnb">의안검색</h2>
+				<ul class="list">
+					<li>
+						<a href="/bill/BillSearchSimple.do"  >간편검색</a>
+					</li>
+					<li>
+						<a href="/bill/BillSearchDetail.do" class="on" >상세검색</a>
+					</li>
+				</ul>
+			</div>
+	
+			
+	
+	
+	
+	
+	
+	
+	
+
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+			
+			
+			
+			
+	
+			<!-- //LNB -->	
+			
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ -->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var divHeight = $("#summaryHiddenContentDiv").height()+30;
+	$("#summaryHiddenContentDiv").attr("sheight",divHeight);
+	$("#summaryHiddenContentDiv").hide();
+	//본회의 처리의안일경우
+	var tabMenuType = "billDetailSearch";
+	if(tabMenuType == "bonConfProcBill") {
+		var age = "";
+		ajaxBonConfLNBsessionList(age, '');
+	}                                                                                               
+	
+	
+	$("#commentListArea").hide();
+});
+</script>
+
+
+			<div class="subContents">
+				<h3 class="titCont"><img src="/bill/images/icon/icon_mainti.png" alt="">[030392] 민의원의원선거법안(내무위원장 법제사법위원장) <span class="tip" id="nacomTipSpan" style="display:none;margin-left: 5px;">입법예고중</span></h3>
+
+
+
+
+				<div class="contents">
+					<div class="boxType01">
+						<p class="textType01 bul01">심사진행단계</p> 
+						<div class="stepType01 mt20">
+							
+<!-- 심사진행단계 -->
+						
+									<span  >접수</span>
+							
+										<img src="/bill/images/icon/icon_arrR.png" alt="&gt;" />
+						
+									<span  >본회의 심의</span>
+							
+										<img src="/bill/images/icon/icon_arrR.png" alt="&gt;" />
+						
+									<span  >정부 이송</span>
+							
+										<img src="/bill/images/icon/icon_arrR.png" alt="&gt;" />
+						
+									<span  class="on"  >공포</span>
+						
+						</div>
+					</div>
+
+<!-- 접수 시작 -->
+
+					
+					
+					
+					
+					<div class="subti01 " >
+						
+						
+						<h4>접수</h4>
+					</div>
+					<div class="contIn">
+						<h5 class="subti02">▶ 의안접수정보</h5>
+						<div class="tableCol01">
+							<table summary="의안접수정보의 의안번호, 제안일자, 제안자, 문서, 제안회기 정보">
+								<caption class="hidden">의안접수정보</caption>
+								<colgroup>
+									<col style="width:70px" />
+									<col style="width:80px" />
+									<col style="width:210px" />
+									<col style="width:auto" />
+									<col style="width:210px" />
+								</colgroup>
+								
+								<thead>
+									<tr>
+										<th scope="col">의안번호</th>
+										<th scope="col">제안일자</th>
+										<th scope="col">제안자</th>
+										<th scope="col">문서</th>
+										<th scope="col">제안회기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><!-- 1918446 -->030392</td>
+										<td><!-- 2015-08-27 -->1957-12-31</td>
+										<td>
+											<!-- 민병주의원 등 11인 -->내무위원장 법제사법위원장 
+											
+											
+											<!-- layerpop -->
+											<div class="layerpop layer590x500" style="display:none;">
+												
+											</div>
+											<!-- //layerpop -->
+										</td>
+										<td>
+											<!-- 문서 -->
+											<a href="javascript:openBillFile('http://likms.assembly.go.kr/filegate/servlet/FileGate','000564032','1');"><img src="/bill/images/icon/icon_pdf.png" alt='attfile' /></a>의안원문<br />
+											
+											
+										</td>
+										<td>
+											<!-- 제19대 (2012~2016) 제336 회 -->
+											제3대 (1954~1958) 제26회
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+						<h5 class="subti02">▶ 제안이유 및 주요내용</h5>
+						<div class="textType02" id="summaryContentDiv">
+							■ 제안이유<br />
+<br />
+1954.11.29 憲法改正에 따라 國會가 民議院과 參議院으로 構成되게 됨에 따라 參議院議員選擧法의 制定이 不可<br />
+避하게 되자 政府에서도 數次에 亘하여 參議院議員 選擧節次를 規定한 國會議員選擧法案이 提出되었으나 廢棄<br />
+되고 第26回國會에 이르러 野黨側을 代表하여 申泰權議員外 54人과 與黨側을 代表하여 郭義榮議員外 84人이 <br />
+각각 國會議員選擧法案을 提案하였으나 兩案이 制度面에서 縣隔한 差異를 露呈하고 있어 이를 本會議에 同時上<br />
+程하는 境遇 相當한 審議時間이 所要될 것이 豫想되어 與野10人으로 構成된 與野協商委員會를 設置하여 折衷토<br />
+록 한 結果 參議院議員 選擧法案과 民議院議員 選擧法案을 成案하여 이를 提案하기에 이른 것임.<br />
+<br />
+<br />
+■ 주요골자<br />
+<br />
+1.  公務員,學生 또는 他人에게 雇傭된 者가 選擧人名簿의 閱覽 또는 投票에 所要된 時間은 休務 또는 休業으<br />
+    로 할 수 없게 함(第4條 選擧權行使에 대한 保障)<br />
+<br />
+2.  選擧權은 滿21歲, 被選擧權은 滿25歲以上의 者에게 賦與함(第10條 選擧權,第11條 被選擧權)<br />
+<br />
+3.  選擧區는 區·市·郡을 單位로 하되 人口 15萬을 超過하는 때에는 그 超過하는 每10萬마다 1選擧區를 增設<br />
+    함(第15條 選擧區와 議員定數)<br />
+<br />
+4.  區·市·邑·面의 長은 每年3月1日現在로 그 區域內에 60日以上 繼續하여 住所를 가진 選擧權者를 調査하<br />
+    여 3月20日까지 選擧人名簿를 作成토록 함(第18條 名簿作成)<br />
+<br />
+5.  選擧業務를 管理하기 위하여 各級選擧委員會를 設置함(第25條 委員會와 委員定數)<br />
+<br />
+6.  各級 選擧委員會委員에는 院內에 議席을 가진 登錄된 政黨이 推薦한 者 中에서 2人을 參加시키되 與野1人<br />
+    씩으로 함(第27條 委員委囑)<br />
+<br />
+7.  議員候補가 되려는 者는 選擧日이 公告된 날로부터 10日以內에 그 選擧區內의 選擧權者 100人以上 200人以<br />
+    下의 推薦狀을 添附하여 選擧區選擧委員會에 登錄을 申請하도록 함(第23條 登錄)<br />
+<br />
+8.  候補者登錄申請期間이 지난 後라도 登錄된 者가 死亡하였을 때에는 選擧日前 10日까지 候補者登錄을 申請<br />
+    할 수 있게 함(第34條 追加登錄)<br />
+    <br />
+9.  候補者登錄을 申請하고자 하는 者는 候補者 1人當 50萬圓을 選擧區選擧委員會에 寄託하도록 함(第38條 寄<br />
+    託金)<br />
+<br />
+10. 候補者가 辭退하거나 登錄無效로 된 때 또는 候補者의 得票數가 有效投票數의 6分의 1에 達하지 못한 때에<br />
+    는 寄託金은 國庫에 歸屬되도록 함. 當選人은 例外로 함(第39條 寄託金의 歸屬)<br />
+<br />
+11. 候補者 또는 選擧事務長·選擧運動員이 아닌 者는 選擧運動을 할 수 없게 함(第45條 選擧運動을 할 수 없<br />
+    는 者)<br />
+<br />
+12. 壁報는 人口 50人에 1枚의 比率로 選擧區選擧委員會가 作成하여 貼附하되 費用은 自己負擔으로 함(第51條 <br />
+    壁報·第53條 壁報의 費用負擔)<br />
+<br />
+13. 候補者는 選擧運動을 위하여 看板·懸垂幕 其他 標識 等을 作成하여 設置할 수 있게 함(第56條 其他 宣傳<br />
+    施設)<br />
+<br />
+14. 選擧區選擧委員會는 合同政見發表會를 開催할 수 있게 함(第59條 合同演說會)<br />
+<br />
+15. 候補者 選擧事務長 또는 選擧運動員은 自由로히 個人政見發表會 또는 演說會를 開催할 수 있게하되 回數를 <br />
+    當該選擧區內의 投票區數의 倍數를 超過할 수 없게 함(第64條 個人演說會)<br />
+<br />
+16. 候補者 또는 選擧에 관하여 虛僞의 事實을 歪曲하는 放送을 하여 選擧의 公正을 害하지 못하게 함(第69條 <br />
+    虛僞放送의 禁止)<br />
+<br />
+17. 特定候補의 當落을 目的으로 新聞·雜誌 其他 刊行物의 經營 또는 編輯을 擔當하는 者에게 金品,饗應 其他 <br />
+    利益을 提供하거나 特定候補者를 指摘하여 選擧에 관한 報道 其他 論評을 揭載하지 못하도록 함(第72條 新<br />
+    聞·雜誌等의 不法利用制限)<br />
+<br />
+18. 選擧運動을 하기 위한 戶別訪問을 禁함(第76條 戶別訪問禁止)<br />
+<br />
+19. 選擧에 있어 當落을 豫想하는 人氣投票를 할 수 없게 함(第78條 人氣投票의 禁止)<br />
+<br />
+20. 候補者 選擧事務長·出納責任者 또는 選擧運動員은 選擧運動期間中 寄附行爲를 하거나 또는 받지 못하게 <br />
+    함(第85條 寄附行爲의 制限,第86條 寄附받는 行爲의 禁止)<br />
+<br />
+21. 選擧費用은 候補者1人에 대하여 當該選擧區 또는 投票區의 選擧人數를 中央選擧委員會가 定한 金額에 乘하<br />
+    여 얻은 金額을 超過하여 支出할 수 없게 함(第90條 選擧費用의 制限額)<br />
+<br />
+22. 候補者의 選擧運動에 관한 支出은 出納責任者 또는 그 代行者가 아니면 이를 할 수 없게 함(第96條 出納<br />
+    責任者以外의 支出禁止)<br />
+<br />
+23. 出納責任者가 選擧費用의 支出을 하였을 때에는 領收證 其他 이를 證明할 書面을 備置토록 함(第97條 領收<br />
+    證 其他 證明書)<br />
+<br />
+24. 總選擧는 議員任期滿了 60日부터 20日前까지 實施하되 選擧日은 늦어도 그 30日前에 大統領이 公告하도록 <br />
+    함(第103條 選擧日公告)<br />
+<br />
+25. 選擧人이 投票用紙에 候補者를 選擇하는 標를 할 때에는 0의 標로써 하게 함(第113條 記票方法)<br />
+<br />
+26. 候補者 또는 選擧事務長은 2人의 參觀人中 1人씩 交代로 投開票所內에서 投開票狀況을 參觀할 수 있게 함<br />
+    (第115條 投票所參觀人,第129條 開票參觀)<br />
+<br />
+27. 檢察官 警察官이나 現役軍人은 選擧人으로서 投票할 때 以外에는 投票所에 들어갈 수 없게 함(第116條 檢<br />
+    察官等의 投票所出入禁止의 秩序維持)<br />
+<br />
+28. 開票事務는 選擧區選擧委員會가 이를 行하게 함(第125條 開票管理)<br />
+    <br />
+29. 選擧區選擧委員會는 有效投票의 多數를 얻은 者를 當選人으로 決定하되 得票數가 같은 境遇에는 年長者順<br />
+    에 依하여 決定토록 함(第133條 當選人의 決定)<br />
+<br />
+30. 候補者登錄磨勘日에 候補者가 1人일 때에는 投票를 하지 아니함(第134條 無投票에 依한 當選人決定)<br />
+<br />
+31. 選擧日에 被選擧權이 없는 者는 當選人이 될 수 없게 함(第136條 被選擧權喪失로 因한 當選無效)<br />
+<br />
+32. 이 法에서 定한 再選擧事由가 있는 경우에는 再選擧를 하도록 함(第140條 再選擧)<br />
+<br />
+33. 選擧의 效力에 관하여 異議가 있는 選擧人 또는 候補者는 選擧日로부터 30日以內에 選擧區選擧委員長을 被<br />
+    告로 하여 大法院에 提訴할 수 있게 함(第145條 選擧訴訟)<br />
+<br />
+34. 落選者가 當選의 效力에 관하여 異議가 있을 때에는 當選決定日부터 30日以內에 當選人을 被告로 하여 大<br />
+    法院에 提訴할 수 있게 함(第146條 當選訴訟)<br />
+<br />
+<br />
+<br />
+■ 기타사항<br />
+<br />
+第26回國會(定期會) 內務·法制司法委員會(1957.12.31)上程·議決<br />
+第26回國會(定期會) 第69次 本會議(1957.12.31)上程<br />
+第26回國會(定期會) 第70次 本會議(1958.1.1)議決
+						</div>
+						<div class="textType02" id="summaryHiddenContentDiv" >
+							■ 제안이유<br />
+<br />
+1954.11.29 憲法改正에 따라 國會가 民議院과 參議院으로 構成되게 됨에 따라 參議院議員選擧法의 制定이 不可<br />
+避하게 되자 政府에서도 數次에 亘하여 參議院議員 選擧節次를 規定한 國會議員選擧法案이 提出되었으나 廢棄<br />
+되고 第26回國會에 이르러 野黨側을 代表하여 申泰權議員外 54人과 與黨側을 代表하여 郭義榮議員外 84人이 <br />
+각각 國會議員選擧法案을 提案하였으나 兩案이 制度面에서 縣隔한 差異를 露呈하고 있어 이를 本會議에 同時上<br />
+程하는 境遇 相當한 審議時間이 所要될 것이 豫想되어 與野10人으로 構成된 與野協商委員會를 設置하여 折衷토<br />
+록 한 結果 參議院議員 選擧法案과 民議院議員 選擧法案을 成案하여 이를 提案하기에 이른 것임.<br />
+<br />
+<br />
+■ 주요골자<br />
+<br />
+1.  公務員,學生 또는 他人에게 雇傭된 者가 選擧人名簿의 閱覽 또는 投票에 所要된 時間은 休務 또는 休業으<br />
+    로 할 수 없게 함(第4條 選擧權行使에 대한 保障)<br />
+<br />
+2.  選擧權은 滿21歲, 被選擧權은 滿25歲以上의 者에게 賦與함(第10條 選擧權,第11條 被選擧權)<br />
+<br />
+3.  選擧區는 區·市·郡을 單位로 하되 人口 15萬을 超過하는 때에는 그 超過하는 每10萬마다 1選擧區를 增設<br />
+    함(第15條 選擧區와 議員定數)<br />
+<br />
+4.  區·市·邑·面의 長은 每年3月1日現在로 그 區域內에 60日以上 繼續하여 住所를 가진 選擧權者를 調査하<br />
+    여 3月20日까지 選擧人名簿를 作成토록 함(第18條 名簿作成)<br />
+<br />
+5.  選擧業務를 管理하기 위하여 各級選擧委員會를 設置함(第25條 委員會와 委員定數)<br />
+<br />
+6.  各級 選擧委員會委員에는 院內에 議席을 가진 登錄된 政黨이 推薦한 者 中에서 2人을 參加시키되 與野1人<br />
+    씩으로 함(第27條 委員委囑)<br />
+<br />
+7.  議員候補가 되려는 者는 選擧日이 公告된 날로부터 10日以內에 그 選擧區內의 選擧權者 100人以上 200人以<br />
+    下의 推薦狀을 添附하여 選擧區選擧委員會에 登錄을 申請하도록 함(第23條 登錄)<br />
+<br />
+8.  候補者登錄申請期間이 지난 後라도 登錄된 者가 死亡하였을 때에는 選擧日前 10日까지 候補者登錄을 申請<br />
+    할 수 있게 함(第34條 追加登錄)<br />
+    <br />
+9.  候補者登錄을 申請하고자 하는 者는 候補者 1人當 50萬圓을 選擧區選擧委員會에 寄託하도록 함(第38條 寄<br />
+    託金)<br />
+<br />
+10. 候補者가 辭退하거나 登錄無效로 된 때 또는 候補者의 得票數가 有效投票數의 6分의 1에 達하지 못한 때에<br />
+    는 寄託金은 國庫에 歸屬되도록 함. 當選人은 例外로 함(第39條 寄託金의 歸屬)<br />
+<br />
+11. 候補者 또는 選擧事務長·選擧運動員이 아닌 者는 選擧運動을 할 수 없게 함(第45條 選擧運動을 할 수 없<br />
+    는 者)<br />
+<br />
+12. 壁報는 人口 50人에 1枚의 比率로 選擧區選擧委員會가 作成하여 貼附하되 費用은 自己負擔으로 함(第51條 <br />
+    壁報·第53條 壁報의 費用負擔)<br />
+<br />
+13. 候補者는 選擧運動을 위하여 看板·懸垂幕 其他 標識 等을 作成하여 設置할 수 있게 함(第56條 其他 宣傳<br />
+    施設)<br />
+<br />
+14. 選擧區選擧委員會는 合同政見發表會를 開催할 수 있게 함(第59條 合同演說會)<br />
+<br />
+15. 候補者 選擧事務長 또는 選擧運動員은 自由로히 個人政見發表會 또는 演說會를 開催할 수 있게하되 回數를 <br />
+    當該選擧區內의 投票區數의 倍數를 超過할 수 없게 함(第64條 個人演說會)<br />
+<br />
+16. 候補者 또는 選擧에 관하여 虛僞의 事實을 歪曲하는 放送을 하여 選擧의 公正을 害하지 못하게 함(第69條 <br />
+    虛僞放送의 禁止)<br />
+<br />
+17. 特定候補의 當落을 目的으로 新聞·雜誌 其他 刊行物의 經營 또는 編輯을 擔當하는 者에게 金品,饗應 其他 <br />
+    利益을 提供하거나 特定候補者를 指摘하여 選擧에 관한 報道 其他 論評을 揭載하지 못하도록 함(第72條 新<br />
+    聞·雜誌等의 不法利用制限)<br />
+<br />
+18. 選擧運動을 하기 위한 戶別訪問을 禁함(第76條 戶別訪問禁止)<br />
+<br />
+19. 選擧에 있어 當落을 豫想하는 人氣投票를 할 수 없게 함(第78條 人氣投票의 禁止)<br />
+<br />
+20. 候補者 選擧事務長·出納責任者 또는 選擧運動員은 選擧運動期間中 寄附行爲를 하거나 또는 받지 못하게 <br />
+    함(第85條 寄附行爲의 制限,第86條 寄附받는 行爲의 禁止)<br />
+<br />
+21. 選擧費用은 候補者1人에 대하여 當該選擧區 또는 投票區의 選擧人數를 中央選擧委員會가 定한 金額에 乘하<br />
+    여 얻은 金額을 超過하여 支出할 수 없게 함(第90條 選擧費用의 制限額)<br />
+<br />
+22. 候補者의 選擧運動에 관한 支出은 出納責任者 또는 그 代行者가 아니면 이를 할 수 없게 함(第96條 出納<br />
+    責任者以外의 支出禁止)<br />
+<br />
+23. 出納責任者가 選擧費用의 支出을 하였을 때에는 領收證 其他 이를 證明할 書面을 備置토록 함(第97條 領收<br />
+    證 其他 證明書)<br />
+<br />
+24. 總選擧는 議員任期滿了 60日부터 20日前까지 實施하되 選擧日은 늦어도 그 30日前에 大統領이 公告하도록 <br />
+    함(第103條 選擧日公告)<br />
+<br />
+25. 選擧人이 投票用紙에 候補者를 選擇하는 標를 할 때에는 0의 標로써 하게 함(第113條 記票方法)<br />
+<br />
+26. 候補者 또는 選擧事務長은 2人의 參觀人中 1人씩 交代로 投開票所內에서 投開票狀況을 參觀할 수 있게 함<br />
+    (第115條 投票所參觀人,第129條 開票參觀)<br />
+<br />
+27. 檢察官 警察官이나 現役軍人은 選擧人으로서 投票할 때 以外에는 投票所에 들어갈 수 없게 함(第116條 檢<br />
+    察官等의 投票所出入禁止의 秩序維持)<br />
+<br />
+28. 開票事務는 選擧區選擧委員會가 이를 行하게 함(第125條 開票管理)<br />
+    <br />
+29. 選擧區選擧委員會는 有效投票의 多數를 얻은 者를 當選人으로 決定하되 得票數가 같은 境遇에는 年長者順<br />
+    에 依하여 決定토록 함(第133條 當選人의 決定)<br />
+<br />
+30. 候補者登錄磨勘日에 候補者가 1人일 때에는 投票를 하지 아니함(第134條 無投票에 依한 當選人決定)<br />
+<br />
+31. 選擧日에 被選擧權이 없는 者는 當選人이 될 수 없게 함(第136條 被選擧權喪失로 因한 當選無效)<br />
+<br />
+32. 이 法에서 定한 再選擧事由가 있는 경우에는 再選擧를 하도록 함(第140條 再選擧)<br />
+<br />
+33. 選擧의 效力에 관하여 異議가 있는 選擧人 또는 候補者는 選擧日로부터 30日以內에 選擧區選擧委員長을 被<br />
+    告로 하여 大法院에 提訴할 수 있게 함(第145條 選擧訴訟)<br />
+<br />
+34. 落選者가 當選의 效力에 관하여 異議가 있을 때에는 當選決定日부터 30日以內에 當選人을 被告로 하여 大<br />
+    法院에 提訴할 수 있게 함(第146條 當選訴訟)<br />
+<br />
+<br />
+<br />
+■ 기타사항<br />
+<br />
+第26回國會(定期會) 內務·法制司法委員會(1957.12.31)上程·議決<br />
+第26回國會(定期會) 第69次 本會議(1957.12.31)上程<br />
+第26回國會(定期會) 第70次 本會議(1958.1.1)議決
+						</div>
+						<button type="button" class="btnsMore01" id="summaryContentMoreBtn">+ 더보기</button>
+						<button type="button" class="btnsMore01" id="summaryContentCloseBtn" style="display:none;">감추기</button>
+						
+						
+						
+						<!-- 철회요구자 목록 -->
+						
+					</div>
+	
+<!-- 접수 끝 -->					
+					
+					
+					
+<!-- 위원회 심사 -->
+
+					<div class="subti01 subti01_" >
+						
+						<h4>위원회 심사</h4>
+					</div>
+					<div class="contIn">
+					
+						<!-- 소관위원회 심사 시작 -->
+						
+							<h5 class="subti02">▶ 소관위 심사정보</h5>
+							<div class="tableCol01">
+								<table summary=" 소관위 심사정보">
+									<caption class="hidden"> 소관위 심사정보</caption>
+									<colgroup>
+										<col style="width:130px" />
+										<col style="width:80px" />
+										<col style="width:80px" />
+										<col style="width:80px" />
+										<col style="width:110px" />
+										<col style="width:110px" />
+									</colgroup>
+									
+									<thead>
+										<tr>
+											<th scope="col">소관위원회</th>
+											<th scope="col">회부일</th>
+											<th scope="col">상정일</th>
+											<th scope="col">처리일</th>
+											<th scope="col">처리결과</th>
+											<th scope="col">문서</th>
+										</tr>
+									</thead>
+									<tbody>
+											
+										<tr>
+											<td><!-- 소관위원회 --> 내무위원회 </td>
+											<td><!-- 회부일 --> </td>
+											<td><!-- 상정일 --> </td>
+											<td><!-- 처리일 --> 1957-12-31</td>
+											<td><!-- 처리경과 --> 위원회안가결</td>
+											<td style="text-align:center;">
+												<!-- 문서 -->
+												
+															<a href="javascript:openBillFile('http://likms.assembly.go.kr/filegate/servlet/FileGate','000564031','1');"><img src="/bill/images/icon/icon_pdf.png" alt='attfile' /></a>심사보고서
+															<br />
+												
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
+							</div>
+							
+
+
+						<!-- 소관위원회 심사 긑 -->
+
+						
+						<!-- 소관위 회의정보 시작 -->
+						
+						
+					
+					<!-- 소관위 회의정보 끝 -->
+					
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					<!-- 법사위원회 심사 시작 -->
+					
+					<!-- 법사위 회의정보 끝 -->
+						
+						
+						
+						
+						
+						
+						
+						
+					<!-- 관련위원회 심사 시작 -->
+					
+					<!-- 관련위 회의정보  끝 -->
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					<!-- 전원위원회 심사 시작 -->
+					
+				<!-- 전원위 회의정보  끝 -->
+						
+						
+				</div>
+
+<!-- 위원회 심사 끝 -->
+
+
+
+
+
+
+
+<!-- 본회의 심의 시작 -->
+
+					<!-- 본회의 심의 시작 -->
+					<div class="subti01 " >
+						
+						<h4>본회의 심의</h4>
+					</div>
+					
+					<div class="contIn">
+						
+						
+						<h5 class="subti02">▶ 본회의 심의정보</h5>
+						<div class="tableCol01">
+							<table summary="본회의 심의정보">
+								<caption class="hidden">본회의 심의정보</caption>
+								<colgroup>
+									<col style="width:110px" />
+									<col style="width:110px" />
+									<col style="width:auto" />
+									<col style="width:130px" />
+									<col style="width:110px" />
+								</colgroup>
+								
+								<thead>
+									<tr>
+										<th scope="col">상정일</th>
+										<th scope="col">의결일</th>
+										<th scope="col">회의명</th>
+										<th scope="col">회의결과</th>
+										<th scope="col">회의록</th>
+									</tr>
+								</thead>
+								<tbody>
+										
+									<tr>
+										<td><!-- 상정일 -->1957-12-31</td>
+										<td><!-- 의결일 -->1958-01-01</td>
+										<td><!-- 회의명 -->제26회 국회(정기회) 제69차 본회의</td>
+										<td><!-- 회의결과 -->원안가결</td>
+										<td>
+											<!-- 회의록 -->
+											
+															<a href="javascript:openConfFile('http://likms.assembly.go.kr/record/new/','001624')">
+															<img src="/bill/images/icon/icon_pdf.png" alt="" /></a>
+															
+															<a href="javascript:fn_confSummPopup('001624')">
+															<img src="/bill/images/icon/sum_view.gif" alt="" /></a>
+											
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					
+					<!-- 본회의 심의 끝 -->
+					
+					<!-- 본회의 수정안 시작 -->
+					
+					<!-- 본회의 수정안 끝 -->
+					
+					
+					<!-- 정부재의안 시작 -->
+					
+
+				</div>					
+	
+
+
+				
+<!-- 정부이송 및 공포 시작 -->					
+	
+				
+					<div>
+						<div class="floatL w40P">
+							<div class="pr30">
+								<div class="subti01  subti01_" >
+									<h4>정부이송</h4>
+								</div>
+								<div class="contIn">
+									<h5 class="subti02">▶ 정부이송정보</h5>
+									<div class="tableCol01">
+										<table summary="정부이송정보">
+											<caption class="hidden">정부이송정보</caption>
+											<colgroup>
+												<col style="width:100px" /><col style="width:auto" />
+											</colgroup>
+											
+											<thead>
+												<tr>
+													<th scope="col">정부이송일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1958-01-11</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					
+					
+					
+					
+						<div class="floatL w60P">
+							<div class="subti01  subti01_" >
+								<h4>공포</h4>
+							</div>
+							<div class="contIn">
+								<h5 class="subti02 subti01_">▶ 공포정보</h5>
+								<div class="tableCol01">
+									<table summary="공포정보의 공포일자, 공포번호, 공포법률 정보">
+										<caption class="hidden">법사위 체계자구심사정보</caption>
+										<colgroup>
+											<col style="width:100px" /><col style="width:100px" /><col style="width:auto" />
+										</colgroup>
+										
+										<thead>
+											<tr>
+												<th scope="col">공포일자</th>
+												<th scope="col">공포번호</th>
+												<th scope="col">공포법률</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1958-01-25</td>
+												<td>0470</td>
+												<td>
+													<!-- 공포법률 -->
+													
+														<a href="http://likms.assembly.go.kr/law/jsp/Law.jsp?WORK_TYPE=LAW_BON&LAW_ID=A1252&PROM_NO=00470&PROM_DT=19580125" target="_blank">民議院議員選擧法</a>
+													
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+					
+					
+					
+					<div class="clearB"></div>
+					</div>
+			
+
+
+
+<!-- 정부이송 및 공포 끝 -->					
+					
+					
+
+<!-- 부가정보 시작 -->
+					
+					<div class="subti01 " >
+						<h4>부가정보</h4>
+					</div>
+					<div class="contIn">
+						<!-- 타법정보 시작 -->
+						
+						<!-- 타법정보 끝 -->
+						
+						
+						<!-- 비고 시작 -->
+						
+						<h5 class="subti02">▶ 비고</h5>
+						<div class="TEXTTYPE02">
+							* 1957.5.22 申泰權議員外54人이 發議한「國會議員選擧法案」과 1957.9.24 郭義榮議員外84人이 發議한「國會議員選擧法案」을 審査한 결과「民議院議員選擧法」과「參議院議員選擧法」으로 區分制定키로 함<br />* 本法律에 의하여「國會議員選擧法」이 廢止됨<br />* 신태권,곽의영의원이 제출한것은 폐기(서류는 참의원의안선거법안에 첨부되어있음)<br />
+						</div>
+						
+						<!-- 비고 끝 -->
+						
+						
+						<!-- 대안 시작 -->
+						
+						<!-- 대안 끝 -->
+						
+						
+						
+						<!-- 대안반영폐기 의안목록 시작 -->
+						
+						<!-- 대안반영폐기 의안목록 끝 -->
+						
+					</div>
+
+<!-- 부가정보 끝 -->					
+					
+					
+					
+					
+					
+
+
+
+
+					<div id="commentArea">
+
+					</div>
+					
+					<script>
+						ajaxNacomList('002268');
+					</script>
+					
+					<div class="listBtn">
+						<a href="javascript:fGoList('billDetailSearch', '','' );" class="btnd mt50">목록</a>
+					</div>
+					
+					
+
+				</div>
+				
+				
+			</div>
+			
+
+
+
+
+	
+		</div>
+		<!-- //컨텐츠 -->	
+		
+
+
+		<div class="footerWrap">
+			<div class="footerLink">
+				<div class="inner">
+					<a href="/bill/info/HelpDesk.do?tabMenuType=helpdesk_1">도움말</a> |
+					<a href="/bill/info/Persnalinfo.do?tabMenuType=persnalinfo">개인정보처리방침</a> |
+					<a href="#" class="allMenu">사이트맵</a>
+
+					<div class="familySite">
+						<select title="관련사이트바로가기" name="menu2" onChange="if(this.options[this.selectedIndex].value != '') window.open(this.options[this.selectedIndex].value,'_blank')">
+							<option value="" selected>관련사이트 바로가기</OPTION>
+							<option value="http://www.assembly.go.kr">대한민국국회</OPTION>       
+							<option value="http://committee.na.go.kr">국회상임위원회 및 특별위원회</OPTION>
+							<option value="http://naph.assembly.go.kr">맞춤입법콘텐츠검색시스템</OPTION>
+							<option value="http://likms.assembly.go.kr/law">국회법률정보시스템</OPTION>
+							<option value="http://likms.assembly.go.kr/bill/nafs/nafsList.do">예결산정보시스템</OPTION>
+							<option value="http://likms.assembly.go.kr/inspections/main.do">국정감사정보시스템</OPTION>
+							<option value="http://likms.assembly.go.kr/record/">회의록시스템</OPTION>
+							<option value="http://assembly.webcast.go.kr">인터넷의사중계시스템</OPTION>
+							<option value="http://w3.assembly.go.kr/vod/index.jsp">영상회의록시스템</OPTION>
+							<option value="http://w3.assembly.go.kr/multimedia">미디어자료관</OPTION>
+							<option value="http://pal.assembly.go.kr">국회입법예고시스템</OPTION>
+						</select>
+						
+					</div>
+				</div>
+			</div>
+			<div class="footerInfo inner">
+				<p>
+					주소 : 서울시 영등포구 의사당대로 1(여의도동) 07233  &nbsp;&nbsp;&nbsp;전화 : 02)6788-2030<br />
+					대한민국국회 의안정보시스템의 모든 정보에 대한 권한은 국회에 있습니다.  Copyright © National Assembly. All rights reserved.
+				</p>
+				<div class="footLogo"><img src="/bill/images/common/foot_logo.png" alt="의안정보시스템" /></div><div style="float:right;position:relative;bottom:0;left:0;"><div class="topBtn" onclick="$(window).scrollTop(0);"><img src="/bill/images/icon/top.gif" /></div></div>
+			</div>
+		</div>
+
+
+	<!-- 공통팝업 -->
+	<div id="commPopDiv" class="layerpop layer590x500" style="display:none;">
+	</div>
+	
+	
+	<!-- layerpop 역대국회기간 -->
+	<div id="periodDiv" class="layerpop layer590x500" style="display:none;">
+		<p class="layti">역대국회기간</p>
+		<a href="javascript:hideLayerPopup();" class="btnClose"><img src="/bill/images/icon/icon_close.png" alt="창닫기" /></a>
+	
+		<div class="tableCol02 layerInScroll">
+			<table>
+				<caption class="hidden">등록의견 리스트</caption>
+				<colgroup>
+					<col style="width:150px" /><col style="width:150px" /><col style="width:auto" />
+				</colgroup>
+				
+				<thead>
+					<tr>
+						<th scope="col">대별</th>
+						<th scope="col">회기</th>
+						<th scope="col">기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>제헌국회</td>
+						<td>1 ~ 6</td>
+						<td>1948.5.31 ~ 1950.5.30</td>
+					</tr>
+					<tr>
+						<td>2 대 국 회</td>
+						<td>7 ~ 18</td>
+						<td>1950.5.31 ~ 1954.5.30</td>
+					</tr>
+					<tr>
+						<td>3 대 국 회</td>
+						<td>19 ~ 28</td>
+						<td>1954.5.31 ~ 1958.5.30</td>
+					</tr>
+					<tr>
+						<td>4 대 국 회</td>
+						<td>29 ~ 35</td>
+						<td>1958.5.31 ~ 1960.7.28</td>
+					</tr>
+					<tr>
+						<td>5 대 국 회</td>
+						<td>36 ~ 38</td>
+						<td>1960.7.29 ~ 1961.5.16</td>
+					</tr>
+					<tr>
+						<td>국가재건최고회의</td>
+						<td>-</td>
+						<td>1961.5.19 ~ 1963.12.16</td>
+					</tr>
+					<tr>
+						<td>6 대 국 회</td>
+						<td>39 ~ 60</td>
+						<td>1963.12.17 ~ 1967.6.30</td>
+					</tr>
+					<tr>
+						<td>7 대 국 회</td>
+						<td>61 ~ 76</td>
+						<td>1967.7.1 ~ 1971.6.30</td>
+					</tr>
+					<tr>
+						<td>8 대 국 회</td>
+						<td>77 ~ 84</td>
+						<td>1971.7.1 ~ 1972.10.17</td>
+					</tr>
+					<tr>
+						<td>9 대 국 회</td>
+						<td>85 ~ 100</td>
+						<td>1973.3.12 ~ 1979.3.11</td>
+					</tr>
+					<tr>
+						<td>10 대 국 회</td>
+						<td>101 ~ 105</td>
+						<td>1979.3.12 ~ 1980.10.27</td>
+					</tr>
+					<tr>
+						<td>국가보위입법회의</td>
+						<td>-</td>
+						<td>1980.10.28 ~ 1981.4.10</td>
+					</tr>
+					<tr>
+						<td>11 대 국 회</td>
+						<td>106 ~ 124</td>
+						<td>1981.4.11 ~ 1985.4.10</td>
+					</tr>
+					<tr>
+						<td>12 대 국 회</td>
+						<td>125 ~ 140</td>
+						<td>1985.4.11 ~ 1988.5.29</td>
+					</tr>
+					<tr>
+						<td>13 대 국 회</td>
+						<td>141 ~ 156</td>
+						<td>1988.5.30 ~ 1992.5.29</td>
+					</tr>
+					<tr>
+						<td>14 대 국 회</td>
+						<td>157 ~ 178</td>
+						<td>1992.5.30 ~ 1996.5.29</td>
+					</tr>
+					<tr>
+						<td>15 대 국 회</td>
+						<td>179 ~ 211</td>
+						<td>1996.5.30 ~ 2000.5.29</td>
+					</tr>
+					<tr>
+						<td>16 대 국 회</td>
+						<td>212 ~ 246</td>
+						<td>2000.5.30 ~ 2004.5.29</td>
+					</tr>
+					<tr>
+						<td>17 대 국 회</td>
+						<td>247 ~ 274</td>
+						<td>2004.5.30 ~ 2008.5.29</td>
+					</tr>
+					<tr>
+						<td>18 대 국 회</td>
+						<td>275 ~ 307</td>
+						<td>2008.5.30 ~ 2012.5.29</td>
+					</tr>
+					<tr>
+						<td>19 대 국 회</td>
+						<td>308 ~</td>
+						<td>2012.5.30 ~ 2016.5.29</td>
+					</tr>
+				</tbody>
+			</table>
+	
+			<p class="textType02 mt20">
+				제1공화국 : 제정헌법ㆍ제1차ㆍ제2차개헌<br />
+				제2공화국 : 제3차ㆍ제4차개헌<br />
+				제3공화국 : 제5차ㆍ제6차개헌<br />
+				제4공화국 : 제7차개헌<br />
+				제5공화국 : 제8차개헌
+			</p>
+		</div>
+	</div>
+	<!-- //layerpop -->
+	
+	
+	<form id="hiddenGoDetailForm" name="hiddenGoDetailForm" method="post" action="/bill/billDetail.do">
+		<input type="hidden" name="srchBillResultCd" value="" />
+		<input type="hidden" name="billId" value="002268" />
+		<input type="hidden" name="sessionCd" value="" />
+		<input type="hidden" name="currentsCd" value="" />
+		<input type="hidden" name="currentsDt" value="" />
+		<input type="hidden" name="billNo" value="" />
+		<input type="hidden" name="billName" value='' />
+		<input type="hidden" name="simsaBonmun" value='' />
+		<input type="hidden" name="ageFrom" value="" />
+		<input type="hidden" name="ageTo" value="" />
+		<input type="hidden" name="age" value="" />
+		<input type="hidden" name="dateFrom" value="" />
+		<input type="hidden" name="dateTo" value="" />
+		<input type="hidden" name="procFrom" value="" />
+		<input type="hidden" name="procTo" value="" />
+		<input type="hidden" name="dispFrom" value="" />
+		<input type="hidden" name="dispTo" value="" />
+		<input type="hidden" name="proposeFrom" value="" />
+		<input type="hidden" name="proposeTo" value="" />
+		<input type="hidden" name="submitFrom" value="" />
+		<input type="hidden" name="submitTo" value="" />
+		<input type="hidden" name="billNoFrom" value="" />
+		<input type="hidden" name="billNoTo" value="" />
+		<input type="hidden" name="billKind" value="" />
+		<input type="hidden" name="billKind2" value="" />
+		<input type="hidden" name="billKindExclude" value="" />
+		<input type="hidden" name="chargeCommittee" value="" />
+		<input type="hidden" name="chargeCommitteeName" value="" />
+		<input type="hidden" name="proposerKind" value="" />
+		<input type="hidden" name="proposer" value='' />
+		<input type="hidden" name="hjNm" value="" />
+		<input type="hidden" name="statsType" value="" />
+		<input type="hidden" name="proposeGubn" value="" />
+		<input type="hidden" name="generalResult" value="" />
+		<input type="hidden" name="generalResultType" value="" />			
+		<input type="hidden" name="committeeResult" value="" />
+		<input type="hidden" name="periodFrom" value="" />
+		<input type="hidden" name="periodTo" value="" />
+		<input type="hidden" name="budgetYn" value="" />
+		<input type="hidden" name="billGbnAmendment" value="" />			
+		<input type="hidden" name="orderColumn" value="" />
+		<input type="hidden" name="orderType" value="" />
+		<input type="hidden" name="lastQuery" value="" />
+		<input type="hidden" name="strPage"  value="" />
+		<input type="hidden" name="pageSize"  value="" />
+		<input type="hidden" name="maxPage"  value="" />
+		<input type="hidden" name="billparam"  value="" />
+		<input type="hidden" name="allCount" value="" />
+		<input type="hidden" name="resultCount" value="" />
+		<input type="hidden" name="mooring" value="" />
+		<input type="hidden" name="statsKind" value="" />
+		<input type="hidden" name="ageCheck" value="" />
+		<input type="hidden" name="tabMenuType" value="billDetailSearch" />
+	</form>
+	
+	<form id="hiddenGoDetailForm2" name="hiddenGoDetailForm2" method="post" action="/bill/billDetail2.do">
+		<input type="hidden" name="billId"  value="002268" />
+		<input type="hidden" name="ageFrom" value="" />
+		<input type="hidden" name="ageTo" value="" />
+		<input type="hidden" name="sessionCd" value="" />
+		<input type="hidden" name="currentsCd" value="" />
+		<input type="hidden" name="tabMenuType" value="billDetailSearch" />
+	</form>
+	
+	
+	<form id="hiddenForm" name="hiddenForm" method="post" target="_blank" action="/bill">
+		
+	</form>
+	<div style="overflow:hidden; width:0px; height:0px;">
+		<iframe name="hiddenIframe" id="hiddenIframe"  width="0" height="0" title="파일다운로드 프레임"></iframe>
+	</div>
+	</div>
+</body>
+</html>
