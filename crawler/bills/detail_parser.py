@@ -126,7 +126,7 @@ def detail_parser():
                     bill_dict = {'의안번호': bill_num, 'id': billID}
                     with open(f'./의원/21/{name}_{coactorid}.json', 'r') as f:
                         data = json.load(f)
-                    data["제안의안"] = bill_dict
+                    data["제안의안"].append(bill_dict)
                     with open(f'./의원/21/{name}_{coactorid}.json', 'w') as f:
                         json.dump(data, f, indent=4, ensure_ascii=False)
                 # print(name, party, name_chinese, c['href'][58:])
