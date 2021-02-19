@@ -6,15 +6,14 @@ import pandas as pd
 from datetime import datetime
 from requests import get
 import os
-from urllib.request import urlopen, urlretrieve, Request
+from urllib.request import urlopen, urlretrieve, Request, HTTPError
 import urllib
 import cgi
 import ssl
 
 #파일명 인코딩 과정
 ssl._create_default_https_context = ssl._create_unverified_context
-age_list = ["03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
-            "16", "17", "18", "19", "20", "21"]
+age_list = ["15", "16", "17", "18", "19", "20", "21"]
 
 #1-20대 id는 v2에서 전부 가져옴
 v2_age_list = ["03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
@@ -137,71 +136,78 @@ def detail_parser():
             for a in soup.select('table > tbody > tr > td > a'):
                 #print(a)
                 href = a.attrs['href']
+                try:
+                    if 'openBillFile' in href:
+                        td = a.parent
 
-                if 'openBillFile' in href:
-                    td = a.parent
+                        k = re.findall("\'{1}(.*?)\'{1}", href)
+                        #print(k)
+                        fileID = k[1]
+                        filetype = k[2]
 
-                    k = re.findall("\'{1}(.*?)\'{1}", href)
-                    #print(k)
-                    fileID = k[1]
-                    filetype = k[2]
+                        file_url = "http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=" + fileID + "&type=" + filetype
+                        print(file_url)
 
-                    file_url = "http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=" + fileID + "&type=" + filetype
-                    print(file_url)
+                        file_save = file_folder + "/" + bill_num + "_file"
+                        if not os.path.exists(file_save):
+                            os.mkdir(file_save)
 
-                    file_save = file_folder + "/" + bill_num + "_file"
-                    if not os.path.exists(file_save):
-                        os.mkdir(file_save)
+                        if filetype == '0': # hwp 형식 파일
+                            req = Request(file_url, headers={'User-Agent': 'Mozilla/5.0'})
+                            remotefile = urlopen(req)
+                            blah = remotefile.info()['Content-Disposition']
+                            value, params = cgi.parse_header(blah)
+                            filename = params["filename"]
+                            filename = urllib.parse.unquote(filename)
+                            filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
+                            filepath = file_save + "/" + filename
+                            print(filepath)
+                            urlretrieve(url, filepath)
 
-                    if filetype == '0': # hwp 형식 파일
-                        req = Request(file_url, headers={'User-Agent': 'Mozilla/5.0'})
+                        elif filetype == '1': # pdf 형식 파일
+                            req = Request(file_url, headers={'User-Agent': 'Mozilla/5.0'})
+                            remotefile = urlopen(req)
+                            blah = remotefile.info()['Content-Disposition']
+                            value, params = cgi.parse_header(blah)
+                            filename = params["filename"]
+                            filename = urllib.parse.unquote(filename)
+                            filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
+                            filepath = file_save + "/" + filename
+                            print(filepath)
+                            urlretrieve(url, filepath)
+                        else:
+                            print("unexpected error")
+                            print(bill_num)
+
+                    elif 'ConfFile' in href: # pdf 회의록 요약
+                        k = re.findall("\'{1}(.*?)\'{1}", href)
+                        fileID = k[1]
+                        conf_url = "http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM="+fileID
+                        print(conf_url)
+
+                        file_save = file_folder + "/" + bill_num + "_file"
+                        if not os.path.exists(file_save):
+                            os.mkdir(file_save)
+
+                        req = Request(conf_url, headers={'User-Agent': 'Mozilla/5.0'})
                         remotefile = urlopen(req)
                         blah = remotefile.info()['Content-Disposition']
                         value, params = cgi.parse_header(blah)
                         filename = params["filename"]
                         filename = urllib.parse.unquote(filename)
-                        filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
                         filepath = file_save + "/" + filename
                         print(filepath)
                         urlretrieve(url, filepath)
 
-                    elif filetype == '1': # pdf 형식 파일
-                        req = Request(file_url, headers={'User-Agent': 'Mozilla/5.0'})
-                        remotefile = urlopen(req)
-                        blah = remotefile.info()['Content-Disposition']
-                        value, params = cgi.parse_header(blah)
-                        filename = params["filename"]
-                        filename = urllib.parse.unquote(filename)
-                        filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
-                        filepath = file_save + "/" + filename
-                        print(filepath)
-                        urlretrieve(url, filepath)
                     else:
-                        print("unexpected error")
-                        print(bill_num)
+                        continue
 
-                elif 'ConfFile' in href: # pdf 회의록 요약
-                    k = re.findall("\'{1}(.*?)\'{1}", href)
-                    fileID = k[1]
-                    conf_url = "http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM="+fileID
-                    print(conf_url)
-
-                    file_save = file_folder + "/" + bill_num + "_file"
-                    if not os.path.exists(file_save):
-                        os.mkdir(file_save)
-
-                    req = Request(conf_url, headers={'User-Agent': 'Mozilla/5.0'})
-                    remotefile = urlopen(req)
-                    blah = remotefile.info()['Content-Disposition']
-                    value, params = cgi.parse_header(blah)
-                    filename = params["filename"]
-                    filename = urllib.parse.unquote(filename)
-                    filepath = file_save + "/" + filename
-                    print(filepath)
-                    urlretrieve(url, filepath)
-
-                else:
-                    continue
+                except HTTPError as e:
+                    error_dict = {}
+                    error_dict['의안번호'] = raw_data[i]["의안번호"]
+                    error_dict['id'] = raw_data[i]["id"]
+                    error_dict['file_url'] = file_url
+                    err.append(error_dict)
 
             # 파싱한 날짜 기록
             table_dict['parsed_date'] = datetime.now().strftime("%Y-%m-%d")
