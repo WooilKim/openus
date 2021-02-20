@@ -106,7 +106,7 @@ def detail_parser():
 
             if age == "21": # 의원이 제안한 의안
                 coactorurl = "http://likms.assembly.go.kr/bill/coactorListPopup.do?billId=" + billID
-                print(coactorurl)
+                #print(coactorurl)
                 coactorsource = requests.get(coactorurl)
                 coactorsoup = bs(coactorsource.text, 'lxml')
                 coactors = list()
@@ -146,7 +146,7 @@ def detail_parser():
                         filetype = k[2]
 
                         file_url = "http://likms.assembly.go.kr/filegate/servlet/FileGate?bookId=" + fileID + "&type=" + filetype
-                        print(file_url)
+                        #print(file_url)
 
                         file_save = file_folder + "/" + bill_num + "_file"
                         if not os.path.exists(file_save):
@@ -161,7 +161,7 @@ def detail_parser():
                             filename = urllib.parse.unquote(filename)
                             filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
                             filepath = file_save + "/" + filename
-                            print(filepath)
+                            #print(filepath)
                             urlretrieve(url, filepath)
 
                         elif filetype == '1': # pdf 형식 파일
@@ -173,7 +173,7 @@ def detail_parser():
                             filename = urllib.parse.unquote(filename)
                             filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
                             filepath = file_save + "/" + filename
-                            print(filepath)
+                            #print(filepath)
                             urlretrieve(url, filepath)
                         else:
                             print("unexpected error")
@@ -183,7 +183,7 @@ def detail_parser():
                         k = re.findall("\'{1}(.*?)\'{1}", href)
                         fileID = k[1]
                         conf_url = "http://likms.assembly.go.kr/record/new/getFileDown.jsp?CONFER_NUM="+fileID
-                        print(conf_url)
+                        #print(conf_url)
 
                         file_save = file_folder + "/" + bill_num + "_file"
                         if not os.path.exists(file_save):
@@ -196,13 +196,15 @@ def detail_parser():
                         filename = params["filename"]
                         filename = urllib.parse.unquote(filename)
                         filepath = file_save + "/" + filename
-                        print(filepath)
+                        #print(filepath)
                         urlretrieve(url, filepath)
 
                     else:
                         continue
 
                 except HTTPError as e:
+                    print(e.reason)
+                    print('file error occured in bill ' + raw_data[i]["의안번호"])
                     error_dict = {}
                     error_dict['의안번호'] = raw_data[i]["의안번호"]
                     error_dict['id'] = raw_data[i]["id"]
