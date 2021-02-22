@@ -16,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 age_list = ["15", "16", "17", "18", "19", "20", "21"]
 
 #1-20대 id는 v2에서 전부 가져옴
-v2_age_list = ["03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
+v2_age_list = ["01", "02", "03", "04", "05", "AA", "06", "07", "08", "BB", "09", "10", "CC", "11", "12", "13", "14", "15",
                "16", "17", "18", "19", "20"]
 
 # parsed date
@@ -65,11 +65,13 @@ def detail_parser():
             table_dict = {}
             try:
                 bill_num = soup.select('table > tbody > tr > td')[0].text # 의안번호
+                bill_num = bill_num.replace(' ', '')
             except: #에러 발생 시 의안 분류
                 #print(raw_data[i]["의안번호"])
                 error_dict = {}
                 error_dict['의안번호'] = raw_data[i]["의안번호"]
                 error_dict['id'] = raw_data[i]["id"]
+                error_dict['error'] = "access error"
                 err.append(error_dict)
                 continue
             #print(bill_num)
@@ -85,8 +87,7 @@ def detail_parser():
                     th_list.append(th.text)
 
                 for td in parent.find_all('td'):  # 테이블 내용
-                    value = td.text.replace('\t', '').replace('\n', '').replace('\r', '').replace('\xa0', '').replace(
-                        ' ', '')
+                    value = td.text.replace('\t', '').replace('\n', '').replace('\r', '').replace('\xa0', '').replace(' ', '')
                     td_list.append(value)
 
                 df = pd.DataFrame(columns=th_list)  # DataFrame화
@@ -161,7 +162,7 @@ def detail_parser():
                             filename = urllib.parse.unquote(filename)
                             filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
                             filepath = file_save + "/" + filename
-                            #print(filepath)
+                            print(filepath)
                             urlretrieve(url, filepath)
 
                         elif filetype == '1': # pdf 형식 파일
@@ -173,7 +174,7 @@ def detail_parser():
                             filename = urllib.parse.unquote(filename)
                             filename = filename[:-4] + "_" + fileID[:4] + filename[-4:]
                             filepath = file_save + "/" + filename
-                            #print(filepath)
+                            print(filepath)
                             urlretrieve(url, filepath)
                         else:
                             print("unexpected error")
@@ -196,21 +197,30 @@ def detail_parser():
                         filename = params["filename"]
                         filename = urllib.parse.unquote(filename)
                         filepath = file_save + "/" + filename
-                        #print(filepath)
+                        print(filepath)
                         urlretrieve(url, filepath)
 
                     else:
                         continue
 
                 except HTTPError as e:
-                    print(e.reason)
                     print('file error occured in bill ' + raw_data[i]["의안번호"])
                     error_dict = {}
                     error_dict['의안번호'] = raw_data[i]["의안번호"]
                     error_dict['id'] = raw_data[i]["id"]
                     error_dict['file_url'] = file_url
+                    error_dict['error'] = "HTTPError: " + str(e)
+                    print(error_dict['error'])
                     err.append(error_dict)
-
+                except TypeError as e:
+                    print('file error occured in bill ' + raw_data[i]["의안번호"])
+                    error_dict = {}
+                    error_dict['의안번호'] = raw_data[i]["의안번호"]
+                    error_dict['id'] = raw_data[i]["id"]
+                    error_dict['file_url'] = file_url
+                    error_dict['error'] = "TypeError: " + str(e)
+                    print(error_dict['error'])
+                    err.append(error_dict)
             # 파싱한 날짜 기록
             table_dict['parsed_date'] = datetime.now().strftime("%Y-%m-%d")
             jsondict = json.dumps(table_dict, indent=4, ensure_ascii=False)
@@ -226,10 +236,10 @@ def detail_parser():
 
             print(bill_num)
 
-    jsonerror = json.dumps(err, indent=4, ensure_ascii=False)
-    with open(f'./{version}/error_bill.json', 'w') as f:
-        f.write(jsonerror)
-        f.flush()
+        jsonerror = json.dumps(err, indent=4, ensure_ascii=False)
+        with open(f'./{version}/{age}_error_bill.json', 'w') as f:
+            f.write(jsonerror)
+            f.flush()
 
 if __name__ == '__main__':
     detail_parser()
